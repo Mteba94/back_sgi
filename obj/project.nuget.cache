@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "BFHkyfhSDtcer/xg47N8HBYL+K/0qCJ00mY2/e5BGQmGIDKY2ETMhRaEXQZ+HC6kyvNzJmyM1xe6Hd0rSm8EiQ==",
+  "dgSpecHash": "42qLYB3pnxtq2TIQ0UTW7riMMoEJCPV21wJfD6h2bP2rRnQE0hsuPDrrNOTYVikZVN4J3oAzo9Z0ki82MAgCag==",
   "success": true,
   "projectFilePath": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\WebApi-SGI-T.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\geova\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\geova\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\geova\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\geova\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.20\\microsoft.entityframeworkcore.7.0.20.nupkg.sha512",
@@ -75,16 +75,5 @@
     "C:\\Users\\geova\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requiere AutoMapper (= 12.0.1), pero la versión AutoMapper 13.0.1 ya se resolvió.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

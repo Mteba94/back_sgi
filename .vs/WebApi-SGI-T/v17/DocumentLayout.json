@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\imp\\tiposacramentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\tiposacramentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\tiposacramentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\models\\commons\\response\\tiposacramentoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\models\\commons\\response\\tiposacramentoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:models\\commons\\response\\tiposacramentoresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Models\\Commons\\Response\\TipoSacramentoResponse.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAA1wA0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-26T04:21:41.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-26T04:21:41.262Z"
             },
             {
               "$type": "Document",
