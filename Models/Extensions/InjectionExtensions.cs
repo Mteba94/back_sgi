@@ -15,6 +15,7 @@ namespace WebApi_SGI_T.Models.Extensions
             );
 
             services.AddScoped<TipoSacramentoService>();
+            services.AddScoped<UsuarioService>();
 
             return services;
         }

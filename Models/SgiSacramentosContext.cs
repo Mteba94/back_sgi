@@ -253,6 +253,19 @@ public partial class SgiSacramentosContext : DbContext
             entity.Property(e => e.UsIdusuario)
                 .ValueGeneratedNever()
                 .HasColumnName("us_idusuario");
+
+            entity.Property(e => e.UsUserName)
+                .HasMaxLength(64)
+                .IsUnicode(false)
+                .HasColumnName("us_userName");
+            entity.Property(e => e.UsPass)
+                .HasMaxLength(64)
+                .IsUnicode(false)
+                .HasColumnName("us_pass");
+            entity.Property(e => e.UsImage)
+                .IsRequired(false)
+                .HasColumnName("us_image");
+
             entity.Property(e => e.UsCreateDate)
                 .HasColumnType("datetime")
                 .HasColumnName("us_create_date");

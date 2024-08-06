@@ -6,6 +6,9 @@ namespace WebApi_SGI_T.Models;
 public partial class TblUsuario
 {
     public int UsIdusuario { get; set; }
+    public string UsUserName { get; set; } = null!;
+    public string UsPass { get; set; } = null!;
+    public string? UsImage { get; set; }
 
     public string UsNombre { get; set; } = null!;
 
