@@ -8,7 +8,7 @@ using WebApi_SGI_T.Models.Commons.Request;
 using WebApi_SGI_T.Models.Commons.Response;
 using WebApi_SGI_T.Static;
 using System.Linq.Dynamic.Core;
-using Azure.Core;
+
 
 namespace WebApi_SGI_T.Imp
 {
@@ -93,7 +93,7 @@ namespace WebApi_SGI_T.Imp
 
                 response.Data.TotalRecords = queryableData.Count();
 
-                response.Data.Items = Ordering(filters, queryableData, !(bool)filters.Download!).ToList();
+                response.Data.Items = OrderingHelper.Ordering(filters, queryableData, !(bool)filters.Download!).ToList();
 
                 if (response.Data.Items is null)
                 {
@@ -384,15 +384,6 @@ namespace WebApi_SGI_T.Imp
             }
 
             return response;
-        }
-
-        public IQueryable<TDTO> Ordering<TDTO>(BasePaginationRequest request, IQueryable<TDTO> queryable, bool pagination = false) where TDTO : class
-        {
-            IQueryable<TDTO> queryDto = request.Order == "desc" ? queryable.OrderBy($"{request.Sort} descending") : queryable.OrderBy($"{request.Sort} ascending");
-
-            if (pagination) queryDto = queryDto.Paginate(request);
-
-            return queryDto;
         }
     }
 }

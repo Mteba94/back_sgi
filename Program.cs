@@ -1,4 +1,5 @@
 using WebApi_SGI_T.Imp.Extensions;
+using WebApi_SGI_T.Imp.FileStorage;
 using WebApi_SGI_T.Models.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,12 +9,13 @@ var Cors = "Cors";
 
 builder.Services.AddInjection(Configuration);
 builder.Services.AddInjectionImp(Configuration);
+builder.Services.AddAuthentication(Configuration);
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwagger();
 
 builder.Services.AddCors(options =>
 {
@@ -39,6 +41,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

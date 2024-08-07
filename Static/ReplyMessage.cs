@@ -10,6 +10,7 @@
         public static string MESSAGE_EXISTS = "El registro ya existe.";
         public static string MESSAGE_ACTIVATE = "Registro activado con exito!";
         public static string MESSAGE_TOKEN = "Token generado con exito!";
+        public static string MESSAGE_TOKEN_ERROR = "El usuario y/o contraseña es incorrecta!";
         public static string MESSAGE_VALIDATE = "Errores de validacion.";
         public static string MESSAGE_FAILED = "Ocurrio un error al procesar la solicitud!";
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.FileStorage;
 
 namespace WebApi_SGI_T.Models.Extensions
 {
@@ -16,6 +17,10 @@ namespace WebApi_SGI_T.Models.Extensions
 
             services.AddScoped<TipoSacramentoService>();
             services.AddScoped<UsuarioService>();
+            services.AddScoped<SacramentoService>();
+
+            services.AddSingleton<ImageStorage>();
+            services.AddTransient<ImageService>();
 
             return services;
         }
