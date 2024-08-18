@@ -32,7 +32,7 @@ namespace WebApi_SGI_T.Imp
             var response = new BaseResponse<string>();
             var account = await GetUsuarioByUserName(token.Username!);
 
-            if (account.Data is not null)
+            if (account.Data is not null && !string.IsNullOrEmpty(token.Password) && !string.IsNullOrEmpty(account.Data.UsPass))
             {
                 if(BC.Verify(token.Password, account.Data.UsPass))
                 {
@@ -46,6 +46,11 @@ namespace WebApi_SGI_T.Imp
                     response.IsSuccess = false;
                     response.Message = ReplyMessage.MESSAGE_TOKEN_ERROR;
                 }
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Message = ReplyMessage.MESSAGE_TOKEN_ERROR;
             }
 
             return response;
@@ -189,6 +194,7 @@ namespace WebApi_SGI_T.Imp
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.NameId, user.UsUserName),
+                new Claim(JwtRegisteredClaimNames.FamilyName, user.UsNombre),
                 new Claim(JwtRegisteredClaimNames.GivenName, user.UsUserName),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UsIdUsuario.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi_SGI_T.Imp;
 using WebApi_SGI_T.Models.Commons.Request;
 
 namespace WebApi_SGI_T.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class SacramentoController : ControllerBase
@@ -34,6 +36,13 @@ namespace WebApi_SGI_T.Controllers
         public async Task<IActionResult> RegisterSacramento([FromBody] SacramentoRequestDto request)
         {
             var response = await _sacramentoService.RegisterSacramento(request);
+            return Ok(response);
+        }
+
+        [HttpPut("Update/{sacramentoId:int}")]
+        public async Task<IActionResult> UpdateSacramento(int sacramentoId, [FromBody] SacramentoRequestDto request)
+        {
+            var response = await _sacramentoService.UpdateSacramento(sacramentoId, request);
             return Ok(response);
         }
     }

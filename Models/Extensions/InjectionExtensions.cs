@@ -18,6 +18,7 @@ namespace WebApi_SGI_T.Models.Extensions
             services.AddScoped<TipoSacramentoService>();
             services.AddScoped<UsuarioService>();
             services.AddScoped<SacramentoService>();
+            services.AddScoped<TipoDocumentoService>();
 
             services.AddSingleton<ImageStorage>();
             services.AddTransient<ImageService>();

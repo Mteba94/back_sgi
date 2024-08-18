@@ -51,6 +51,11 @@ namespace WebApi_SGI_T.Imp
                     }
                 }
 
+                if (filters.StateFilter is not null)
+                {
+                    query = query.Where(x => x.ScIdSacramentoNavigation.TsIdTipoSacramento == filters.StateFilter);
+                }
+
                 if (!string.IsNullOrEmpty(filters.StartDate) && !string.IsNullOrEmpty(filters.EndDate))
                 {
                     var filteredData = response.Data.Items.Where(x => x.ScCreateDate >= Convert.ToDateTime(filters.StartDate)
@@ -161,7 +166,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.CommandText = "sp_control_sacramento";
 
                 cmd.Parameters.Add(new SqlParameter("@i_operacion", "RNS"));
-                cmd.Parameters.Add(new SqlParameter("@i_id_sacramento", request.ScTipoSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_id_sacramento", request.ScIdTipoSacramento));
                 cmd.Parameters.Add(new SqlParameter("@i_numDocto", request.PeNumeroDocumento));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaSacramento", request.ScFechaSacramento));
                 cmd.Parameters.Add(new SqlParameter("@i_padre", request.ScPadre));
@@ -185,6 +190,71 @@ namespace WebApi_SGI_T.Imp
                     response.IsSuccess = true;
                     response.Data = rowsAffected > 0;
                     response.Message = ReplyMessage.MESSAGE_SAVE;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = ReplyMessage.MESSAGE_FAILED;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return response;
+        }
+
+        public async Task<BaseResponse<bool>> UpdateSacramento(int sacramentoId, SacramentoRequestDto request)
+        {
+            var response = new BaseResponse<bool>();
+
+            SqlConnection con = new SqlConnection();
+            SqlCommand cmd;
+            SqlParameter param = new SqlParameter();
+            DataSet ds = new DataSet();
+            SqlDataReader dr;
+
+            try
+            {
+                var createUser = 1;
+                var createDate = DateTime.Now;
+
+                con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
+                cmd = new SqlCommand();
+                cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_control_sacramento";
+
+                cmd.Parameters.Add(new SqlParameter("@i_operacion", "ASE"));
+                cmd.Parameters.Add(new SqlParameter("@i_id", sacramentoId));
+                cmd.Parameters.Add(new SqlParameter("@i_id_sacramento", request.ScIdTipoSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_numDocto", request.PeNumeroDocumento));
+                cmd.Parameters.Add(new SqlParameter("@i_fechaSacramento", request.ScFechaSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_numpartida", request.ScNumeroPartida));
+                cmd.Parameters.Add(new SqlParameter("@i_padre", request.ScPadre));
+                cmd.Parameters.Add(new SqlParameter("@i_madre", request.ScMadre));
+                cmd.Parameters.Add(new SqlParameter("@i_padrino", request.ScPadrino));
+                cmd.Parameters.Add(new SqlParameter("@i_madrina", request.ScMadrina));
+                cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
+                cmd.Parameters.Add(new SqlParameter("@i_nombre", request.PeNombre));
+                cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento", request.PeFechaNacimiento));
+                cmd.Parameters.Add(new SqlParameter("@i_tipoDoc", request.PeIdTipoDocumento));
+                cmd.Parameters.Add(new SqlParameter("@i_observacion", request.ScObservaciones));
+                cmd.Parameters.Add(new SqlParameter("@i_direccion", request.PeDireccion));
+                cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
+                cmd.Parameters.Add(new SqlParameter("@i_Date", createDate));
+
+                con.Open();
+
+                var rowsAffected = await cmd.ExecuteNonQueryAsync();
+
+                if (rowsAffected > 0)
+                {
+                    response.IsSuccess = true;
+                    response.Data = rowsAffected > 0;
+                    response.Message = ReplyMessage.MESSAGE_UPDATE;
                 }
                 else
                 {
