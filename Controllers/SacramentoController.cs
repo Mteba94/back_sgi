@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.Authentication;
 using WebApi_SGI_T.Models.Commons.Request;
 
 namespace WebApi_SGI_T.Controllers
@@ -18,6 +19,7 @@ namespace WebApi_SGI_T.Controllers
             _sacramentoService = sacramentoService;
         }
 
+        //[HasPermission(Permission.ListSacramentos)]
         [HttpPost]
         public async Task<IActionResult> ListSacramentos([FromBody] BaseFiltersRequest filters)
         {

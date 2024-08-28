@@ -73,7 +73,8 @@ namespace WebApi_SGI_T.Imp
                     PeNumeroDocumento = s.ScIdpersonaNavigation.PeNumeroDocumento,
                     ScFechaSacramento = s.ScFechaSacramento,
                     ScObservaciones = s.ScObservaciones,
-                    ScCreateDate = s.ScCreateDate
+                    ScCreateDate = s.ScCreateDate,
+                    
                 }).ToList();
 
                 if (filters.Sort is null) filters.Sort = "ScIdSacramento";
@@ -105,6 +106,7 @@ namespace WebApi_SGI_T.Imp
                 var query = await _context.TblSacramentos
                     .Include(x => x.ScIdSacramentoNavigation)
                     .Include(x => x.ScIdpersonaNavigation)
+                    .Include(x => x.ScIdpersonaNavigation.PeIdTipoDocumentoNavigation)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(x => x.ScIdSacramento == id);
                     
@@ -117,10 +119,20 @@ namespace WebApi_SGI_T.Imp
                     {
                         ScIdSacramento = query.ScIdSacramento,
                         ScNumeroPartida = query.ScNumeroPartida,
+                        scIdTipoSacramento = query.ScIdTipoSacramento,
                         ScTipoSacramento = query.ScIdSacramentoNavigation.TsNombre,
                         PeNombre = query.ScIdpersonaNavigation.PeNombre,
+                        PeFechaNacimiento = query.ScIdpersonaNavigation.PeFechaNacimiento,
                         PeNumeroDocumento = query.ScIdpersonaNavigation.PeNumeroDocumento,
+                        PeIdTipoDocumento = query.ScIdpersonaNavigation.PeIdTipoDocumento,
+                        PeTipoDocumento = query.ScIdpersonaNavigation.PeIdTipoDocumentoNavigation.TdAbreviacion,
+                        PeDireccion = query.ScIdpersonaNavigation.PeDireccion,
+                        ScNombrePadre = query.ScPadre,
+                        ScNombreMadre = query.ScMadre,
+                        ScNombrePadrino = query.ScPadrino,
+                        ScNombreMadrina = query.ScMadrina,
                         ScFechaSacramento = query.ScFechaSacramento,
+                        ScParroco = query.ScParroco,
                         ScObservaciones = query.ScObservaciones,
                         ScCreateDate = query.ScCreateDate
                     };
@@ -169,6 +181,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_id_sacramento", request.ScIdTipoSacramento));
                 cmd.Parameters.Add(new SqlParameter("@i_numDocto", request.PeNumeroDocumento));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaSacramento", request.ScFechaSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_numpartida", request.ScNumeroPartida));
                 cmd.Parameters.Add(new SqlParameter("@i_padre", request.ScPadre));
                 cmd.Parameters.Add(new SqlParameter("@i_madre", request.ScMadre));
                 cmd.Parameters.Add(new SqlParameter("@i_padrino", request.ScPadrino));
@@ -178,6 +191,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento", request.PeFechaNacimiento));
                 cmd.Parameters.Add(new SqlParameter("@i_tipoDoc", request.PeIdTipoDocumento));
                 cmd.Parameters.Add(new SqlParameter("@i_direccion", request.PeDireccion));
+                cmd.Parameters.Add(new SqlParameter("@i_observacion", request.ScObservaciones));
                 cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
                 cmd.Parameters.Add(new SqlParameter("@i_Date", createDate));
 

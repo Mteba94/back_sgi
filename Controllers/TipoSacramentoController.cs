@@ -16,6 +16,7 @@ namespace WebApi_SGI_T.Controllers
         {
             _tipoSacramentoService = tipoSacramentoService;
         }
+
         [HttpPost]
         public IActionResult ListTipoSacramento([FromBody] BaseFiltersRequest filters)
         {

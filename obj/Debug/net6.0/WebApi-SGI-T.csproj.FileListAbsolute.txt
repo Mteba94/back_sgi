@@ -92,3 +92,5 @@ C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\ob
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Debug\net6.0\WebApi-SGI-T.sourcelink.json
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Debug\net6.0\itextsharp.dll

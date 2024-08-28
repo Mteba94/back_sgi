@@ -156,7 +156,7 @@ public partial class SgiSacramentosContext : DbContext
             entity.Property(e => e.ScUpdateUser).HasColumnName("sc_update_user");
 
             entity.HasOne(d => d.ScIdSacramentoNavigation).WithOne(p => p.TblSacramento)
-                .HasForeignKey<TblSacramento>(d => d.ScIdSacramento)
+                .HasForeignKey<TblSacramento>(d => d.ScIdTipoSacramento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_sacra__sc_id__36B12243");
 
