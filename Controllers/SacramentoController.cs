@@ -41,6 +41,13 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HttpPost("Register/Matrimonio")]
+        public async Task<IActionResult> RegisterMatrimonio([FromBody] MatrimonioRequest request)
+        {
+            var response = await _sacramentoService.RegisterMatrimonio(request);
+            return Ok(response);
+        }
+
         [HttpPut("Update/{sacramentoId:int}")]
         public async Task<IActionResult> UpdateSacramento(int sacramentoId, [FromBody] SacramentoRequestDto request)
         {

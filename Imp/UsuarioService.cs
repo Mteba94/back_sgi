@@ -95,10 +95,10 @@ namespace WebApi_SGI_T.Imp
                         response.Data.UsImage = dr.IsDBNull(3) ? null : dr.GetString(3);
                         response.Data.UsNombre = dr.GetString(4);
                         response.Data.UsFechaNacimiento = dr.GetDateTime(5);
-                        response.Data.UsDireccion = dr.GetString(8);
-                        response.Data.UsCreateDate = dr.GetDateTime(11);
-                        response.Data.UsEstado = dr.GetByte(9);
-                        response.Data.EstadoDescripcion = dr.GetByte(9) == 1 ? "Activo" : "Inactivo";
+                        response.Data.UsDireccion = dr.GetString(9);
+                        response.Data.UsCreateDate = dr.GetDateTime(12);
+                        response.Data.UsEstado = dr.GetByte(10);
+                        response.Data.EstadoDescripcion = dr.GetByte(10) == 1 ? "Activo" : "Inactivo";
                     }
                     response.IsSuccess = true;
                     response.Message = ReplyMessage.MESSAGE_QUERY;

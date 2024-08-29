@@ -30,6 +30,10 @@ public partial class SgiSacramentosContext : DbContext
 
     public virtual DbSet<TblUsuario> TblUsuarios { get; set; }
 
+    public virtual DbSet<TblSexo> TblSexos { get; set; }
+
+    public virtual DbSet<TblMatrimonio> TblMatrimonios { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
@@ -74,10 +78,27 @@ public partial class SgiSacramentosContext : DbContext
                 .HasColumnName("pe_update_date");
             entity.Property(e => e.PeUpdateUser).HasColumnName("pe_update_user");
 
+            entity.HasOne(d => d.PeSexoNavigation)
+                .WithMany(p => p.TblPersona)
+                .HasForeignKey(d => d.PeSexoId)
+                .HasConstraintName("FK_tbl_personas_pe_sexo");
+
             entity.HasOne(d => d.PeIdTipoDocumentoNavigation).WithMany(p => p.TblPersonas)
                 .HasForeignKey(d => d.PeIdTipoDocumento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_perso__pe_id__2F10007B");
+
+            entity.HasMany(d => d.EsposoNavigation)
+                .WithOne(p => p.EsposoNavigation)
+                .HasForeignKey(d => d.EsposoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_matri__ma_es__3A81B327");
+
+            entity.HasMany(d => d.EsposaNavigation)
+                .WithOne(p => p.EsposaNavigation)
+                .HasForeignKey(d => d.EsposaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_matri__ma_es__3B75D760");
         });
 
         modelBuilder.Entity<TblRol>(entity =>
@@ -179,7 +200,7 @@ public partial class SgiSacramentosContext : DbContext
                 .HasColumnName("td_abreviacion");
             entity.Property(e => e.TdEstado).HasColumnName("td_estado");
             entity.Property(e => e.TdNombre)
-                .HasMaxLength(20)
+                .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("td_nombre");
         });
@@ -296,10 +317,65 @@ public partial class SgiSacramentosContext : DbContext
                 .HasColumnName("us_update_date");
             entity.Property(e => e.UsUpdateUser).HasColumnName("us_update_user");
 
+            entity.HasOne(d => d.UsSexoNavigation)
+                .WithMany(p => p.TblUsuario)
+                .HasForeignKey(d => d.UsSexoId)
+                .HasConstraintName("FK_tbl_usuarios_us_sexo");
+
             entity.HasOne(d => d.UsIdTipoDocumentoNavigation).WithMany(p => p.TblUsuarios)
                 .HasForeignKey(d => d.UsIdTipoDocumento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_usuar__us_id__3F466844");
+        });
+
+        modelBuilder.Entity<TblSexo>(entity =>
+        {
+            entity.HasKey(e => e.SexoId).HasName("PK__tbl_sexo__5E35066F3EC7CDA4");
+
+            entity.ToTable("tbl_sexo");
+
+            entity.Property(e => e.SexoId)
+                .ValueGeneratedNever()
+                .HasColumnName("se_idSexo");
+            entity.Property(e => e.SexoNombre)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("se_nombre");
+            entity.Property(e => e.SexoAbreviacion)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("se_abreviacion");
+            entity.Property(e => e.SexoEstado)
+                .HasColumnName("se_estado");
+ 
+        });
+
+        modelBuilder.Entity<TblMatrimonio>(entity =>
+        {
+            entity.HasKey(e => e.MatrimonioId).HasName("PK__tbl_matri__D3A3E3A3A3A3A3A3");
+
+            entity.ToTable("tbl_matrimonios");
+
+            entity.Property(e => e.MatrimonioId)
+                .ValueGeneratedNever()
+                .HasColumnName("ma_idMatrimonio");
+
+            entity.Property(e => e.EsposoId)
+                .HasColumnName("ma_esposo");
+
+            entity.Property(e => e.EsposaId)
+                .HasColumnName("ma_esposa");
+
+            entity.HasOne(d => d.EsposoNavigation)
+                .WithMany(p => p.EsposoNavigation)
+                .HasForeignKey(d => d.EsposoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_matri__ma_es__3A81B327");
+
+            entity.HasOne(d => d.EsposaNavigation).WithMany(p => p.EsposaNavigation)
+                .HasForeignKey(d => d.EsposaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_matri__ma_es__3B75D760");
         });
 
         OnModelCreatingPartial(modelBuilder);

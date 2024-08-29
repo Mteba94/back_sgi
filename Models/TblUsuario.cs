@@ -18,6 +18,8 @@ public partial class TblUsuario
 
     public string UsNumerodocumento { get; set; } = null!;
 
+    public byte? UsSexoId { get; set; }
+
     public string? UsDireccion { get; set; }
 
     public byte UsEstado { get; set; }
@@ -37,4 +39,6 @@ public partial class TblUsuario
     public virtual ICollection<TblUserRol> TblUserRols { get; set; } = new List<TblUserRol>();
 
     public virtual TblTipoDocumento UsIdTipoDocumentoNavigation { get; set; } = null!;
+
+    public virtual TblSexo? UsSexoNavigation { get; set; }
 }

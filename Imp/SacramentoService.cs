@@ -220,6 +220,78 @@ namespace WebApi_SGI_T.Imp
             return response;
         }
 
+        public async Task<BaseResponse<bool>> RegisterMatrimonio(MatrimonioRequest request)
+        {
+            var response = new BaseResponse<bool>();
+
+            SqlConnection con = new SqlConnection();
+            SqlCommand cmd;
+            SqlParameter param = new SqlParameter();
+            DataSet ds = new DataSet();
+            SqlDataReader dr;
+
+            try
+            {
+                var createUser = 1;
+                var createDate = DateTime.Now;
+
+                con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
+                cmd = new SqlCommand();
+                cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_control_sacramento_matrimonio";
+
+                cmd.Parameters.Add(new SqlParameter("@i_operacion", "RNM"));
+                cmd.Parameters.Add(new SqlParameter("@i_id_sacramento", request.ScIdTipoSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_numDocto_esposo", request.PeNumeroDocumentoEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_numDocto_esposa", request.PeNumeroDocumentoEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_fechaSacramento", request.ScFechaSacramento));
+                cmd.Parameters.Add(new SqlParameter("@i_numpartida", request.ScNumeroPartida));
+                cmd.Parameters.Add(new SqlParameter("@i_padre_esposo", request.ScPadreEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_padre_esposa", request.ScPadreEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_madre_esposo", request.ScMadreEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_madre_esposa", request.ScMadreEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_testigo1", request.ScTestigo1));
+                cmd.Parameters.Add(new SqlParameter("@i_testigo2", request.ScTestigo2));
+                cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
+                cmd.Parameters.Add(new SqlParameter("@i_nombre_esposo", request.PeNombreEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_nombre_esposa", request.PeNombreEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposo", request.PeFechaNacimientoEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposa", request.PeFechaNacimientoEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_tipoDoc_esposo", request.PeIdTipoDocumentoEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_tipoDoc_esposa", request.PeIdTipoDocumentoEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_direccion_esposo", request.PeDireccionEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_direccion_esposa", request.PeDireccionEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_observacion", request.ScObservaciones));
+                cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
+                cmd.Parameters.Add(new SqlParameter("@i_Date", createDate));
+
+                con.Open();
+
+                var rowsAffected = await cmd.ExecuteNonQueryAsync();
+
+                if (rowsAffected > 0)
+                {
+                    response.IsSuccess = true;
+                    response.Data = rowsAffected > 0;
+                    response.Message = ReplyMessage.MESSAGE_SAVE;
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = ReplyMessage.MESSAGE_FAILED;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return response;
+
+        }
+
         public async Task<BaseResponse<bool>> UpdateSacramento(int sacramentoId, SacramentoRequestDto request)
         {
             var response = new BaseResponse<bool>();
