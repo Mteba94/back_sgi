@@ -41,4 +41,6 @@ public partial class TblUsuario
     public virtual TblTipoDocumento UsIdTipoDocumentoNavigation { get; set; } = null!;
 
     public virtual TblSexo? UsSexoNavigation { get; set; }
+
+    public virtual ICollection<TblConstancias> UsConstancias { get; set; } = null!;
 }

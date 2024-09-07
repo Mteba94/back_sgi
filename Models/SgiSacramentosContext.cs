@@ -34,6 +34,8 @@ public partial class SgiSacramentosContext : DbContext
 
     public virtual DbSet<TblMatrimonio> TblMatrimonios { get; set; }
 
+    public virtual DbSet<TblConstancias> TblConstancias { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
@@ -185,6 +187,12 @@ public partial class SgiSacramentosContext : DbContext
                 .HasForeignKey(d => d.ScIdpersona)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_sacra__sc_id__35BCFE0A");
+
+            entity.HasOne(d => d.ScIdMatrimonioNavigation)
+                .WithMany(p => p.TblSacramentos)
+                .HasForeignKey(d => d.ScIdMatrimonio)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_sacra__sc_id__37A5467C");
         });
 
         modelBuilder.Entity<TblTipoDocumento>(entity =>
@@ -376,6 +384,57 @@ public partial class SgiSacramentosContext : DbContext
                 .HasForeignKey(d => d.EsposaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_matri__ma_es__3B75D760");
+
+            entity.HasMany(d => d.TblSacramentos)
+                .WithOne(p => p.ScIdMatrimonioNavigation)
+                .HasForeignKey(d => d.ScIdMatrimonio)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_sacra__sc_id__35BCFE0B");
+        });
+
+        modelBuilder.Entity<TblConstancias>(entity =>
+        {
+            entity.HasKey(e => e.ct_ConstanciaId).HasName("PK__tbl_cons__D3A3E3A3A3A3A3A4");
+
+            entity.ToTable("tbl_constancias");
+
+            entity.Property(e => e.ct_ConstanciaId)
+                .ValueGeneratedNever()
+                .HasColumnName("ct_idConstancia");
+
+            entity.Property(e => e.ct_SacramentoId)
+                .HasColumnName("ct_SacramentoId");
+
+            entity.Property(e => e.ct_Correlativo)
+                .HasColumnName("ct_Correlativo");
+
+            entity.Property(e => e.ct_FormatoCorrelativo)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("ct_FormatoCorrelativo");
+
+            entity.HasIndex(e => e.ct_FormatoCorrelativo)
+                .IsUnique();
+
+            entity.Property(e => e.ct_UsuarioId)
+                .HasColumnName("ct_UsuarioId");
+
+            entity.Property(e => e.ct_FechaImpresion)
+                .HasColumnType("datetime")
+                .HasColumnName("ct_Fecha");
+
+            entity.HasOne(d => d.ConstanciaNavigation)
+                .WithMany(p => p.ScConstancias)
+                .HasForeignKey(d => d.ct_SacramentoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_const__ct_Sa__3A81B327");
+
+            entity.HasOne(d => d.UsuarioNavigation)
+                .WithMany(p => p.UsConstancias)
+                .HasForeignKey(d => d.ct_UsuarioId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tbl_const_ct_Us_3A81BR328");
+
         });
 
         OnModelCreatingPartial(modelBuilder);

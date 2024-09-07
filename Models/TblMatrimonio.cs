@@ -9,6 +9,7 @@
 
         public virtual TblPersona EsposoNavigation { get; set; }
         public virtual TblPersona EsposaNavigation { get; set; }
+        public virtual ICollection<TblSacramento> TblSacramentos { get; set; }
 
         public bool IsValid()
         {

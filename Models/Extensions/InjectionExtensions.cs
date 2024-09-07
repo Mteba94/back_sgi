@@ -21,6 +21,8 @@ namespace WebApi_SGI_T.Models.Extensions
             services.AddScoped<TipoDocumentoService>();
             services.AddScoped<TipoSexoService>();
             services.AddScoped<CertificationService>();
+            services.AddScoped<HistoricoConstanciasService>();
+            services.AddScoped<DashboardService>();
 
             services.AddSingleton<ImageStorage>();
             services.AddTransient<ImageService>();

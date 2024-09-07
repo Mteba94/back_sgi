@@ -12,6 +12,8 @@
         public byte PeIdTipoDocumentoEsposa { get; set; }
         public string PeNumeroDocumentoEsposo { get; set; } = null!;
         public string PeNumeroDocumentoEsposa { get; set; } = null!;
+        public byte PeSexoIdEsposo { get; set; }
+        public byte PeSexoIdEsposa { get; set; }
         public string? PeDireccionEsposo { get; set; }
         public string? PeDireccionEsposa { get; set; }
         public string? ScPadreEsposo { get; set; }

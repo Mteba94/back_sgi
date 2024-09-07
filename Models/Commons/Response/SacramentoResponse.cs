@@ -6,11 +6,13 @@
         public string? ScNumeroPartida { get; set; }
         public int scIdTipoSacramento { get; set; }
         public string? ScTipoSacramento { get; set; }
+        public int? scMatrimonioId { get; set; }
         public string? PeNombre { get; set; }
         public DateTime PeFechaNacimiento { get; set; }
         public int PeIdTipoDocumento { get; set; }
         public string? PeTipoDocumento { get; set; }
         public string? PeNumeroDocumento { get; set; } = null!;
+        public int? PeSexoId { get; set; }
         public string? PeDireccion { get; set; }
         public string? ScNombrePadre { get; set; }
         public string? ScNombreMadre { get; set; }

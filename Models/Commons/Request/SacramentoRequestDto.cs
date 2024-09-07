@@ -8,6 +8,7 @@
         public DateTime PeFechaNacimiento { get; set; }
         public byte PeIdTipoDocumento { get; set; }
         public string PeNumeroDocumento { get; set; } = null!;
+        public int PeSexoId { get; set; }
         public string? PeDireccion { get; set; }
         public string? ScPadre { get; set; }
         public string? ScMadre { get; set; }

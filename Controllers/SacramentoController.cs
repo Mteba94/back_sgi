@@ -34,6 +34,13 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HttpGet("Matrimonio/{sacramentoId:int}")]
+        public async Task<IActionResult> getMatrimonioById(int sacramentoId)
+        {
+            var response = await _sacramentoService.GetMatrimonioById(sacramentoId);
+            return Ok(response);
+        }
+
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterSacramento([FromBody] SacramentoRequestDto request)
         {
@@ -52,6 +59,13 @@ namespace WebApi_SGI_T.Controllers
         public async Task<IActionResult> UpdateSacramento(int sacramentoId, [FromBody] SacramentoRequestDto request)
         {
             var response = await _sacramentoService.UpdateSacramento(sacramentoId, request);
+            return Ok(response);
+        }
+
+        [HttpPut("Update/Matrimonio/{sacramentoId:int}")]
+        public async Task<IActionResult> UpdateMatrimonio(int sacramentoId, [FromBody] MatrimonioRequest request)
+        {
+            var response = await _sacramentoService.UpdateMatrimonio(sacramentoId, request);
             return Ok(response);
         }
     }

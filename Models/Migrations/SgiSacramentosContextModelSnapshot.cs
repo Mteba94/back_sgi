@@ -23,6 +23,48 @@ namespace WebApi_SGI_T.Models.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblConstancias", b =>
+                {
+                    b.Property<int>("ct_ConstanciaId")
+                        .HasColumnType("int")
+                        .HasColumnName("ct_idConstancia");
+
+                    b.Property<int>("ct_Correlativo")
+                        .HasColumnType("int")
+                        .HasColumnName("ct_Correlativo");
+
+                    b.Property<DateTime>("ct_FechaImpresion")
+                        .HasColumnType("datetime")
+                        .HasColumnName("ct_Fecha");
+
+                    b.Property<string>("ct_FormatoCorrelativo")
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("ct_FormatoCorrelativo");
+
+                    b.Property<int>("ct_SacramentoId")
+                        .HasColumnType("int")
+                        .HasColumnName("ct_SacramentoId");
+
+                    b.Property<int>("ct_UsuarioId")
+                        .HasColumnType("int")
+                        .HasColumnName("ct_UsuarioId");
+
+                    b.HasKey("ct_ConstanciaId")
+                        .HasName("PK__tbl_cons__D3A3E3A3A3A3A3A4");
+
+                    b.HasIndex("ct_FormatoCorrelativo")
+                        .IsUnique()
+                        .HasFilter("[ct_FormatoCorrelativo] IS NOT NULL");
+
+                    b.HasIndex("ct_SacramentoId");
+
+                    b.HasIndex("ct_UsuarioId");
+
+                    b.ToTable("tbl_constancias", (string)null);
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblMatrimonio", b =>
                 {
                     b.Property<int>("MatrimonioId")
@@ -181,6 +223,9 @@ namespace WebApi_SGI_T.Models.Migrations
                         .HasColumnType("date")
                         .HasColumnName("sc_fechaSacramento");
 
+                    b.Property<int?>("ScIdMatrimonio")
+                        .HasColumnType("int");
+
                     b.Property<int>("ScIdTipoSacramento")
                         .HasColumnType("int")
                         .HasColumnName("sc_idTipoSacramento");
@@ -241,6 +286,8 @@ namespace WebApi_SGI_T.Models.Migrations
 
                     b.HasKey("ScIdSacramento")
                         .HasName("PK__tbl_sacr__DF1C6ED661087010");
+
+                    b.HasIndex("ScIdMatrimonio");
 
                     b.HasIndex("ScIdTipoSacramento")
                         .IsUnique();
@@ -491,6 +538,25 @@ namespace WebApi_SGI_T.Models.Migrations
                     b.ToTable("tbl_usuarios", (string)null);
                 });
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblConstancias", b =>
+                {
+                    b.HasOne("WebApi_SGI_T.Models.TblSacramento", "ConstanciaNavigation")
+                        .WithMany("ScConstancias")
+                        .HasForeignKey("ct_SacramentoId")
+                        .IsRequired()
+                        .HasConstraintName("FK__tbl_const__ct_Sa__3A81B327");
+
+                    b.HasOne("WebApi_SGI_T.Models.TblUsuario", "UsuarioNavigation")
+                        .WithMany("UsConstancias")
+                        .HasForeignKey("ct_UsuarioId")
+                        .IsRequired()
+                        .HasConstraintName("FK_tbl_const_ct_Us_3A81BR328");
+
+                    b.Navigation("ConstanciaNavigation");
+
+                    b.Navigation("UsuarioNavigation");
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblMatrimonio", b =>
                 {
                     b.HasOne("WebApi_SGI_T.Models.TblPersona", "EsposaNavigation")
@@ -530,6 +596,11 @@ namespace WebApi_SGI_T.Models.Migrations
 
             modelBuilder.Entity("WebApi_SGI_T.Models.TblSacramento", b =>
                 {
+                    b.HasOne("WebApi_SGI_T.Models.TblMatrimonio", "ScIdMatrimonioNavigation")
+                        .WithMany("TblSacramentos")
+                        .HasForeignKey("ScIdMatrimonio")
+                        .HasConstraintName("FK__tbl_sacra__sc_id__35BCFE0B");
+
                     b.HasOne("WebApi_SGI_T.Models.TblTipoSacramento", "ScIdSacramentoNavigation")
                         .WithOne("TblSacramento")
                         .HasForeignKey("WebApi_SGI_T.Models.TblSacramento", "ScIdTipoSacramento")
@@ -541,6 +612,8 @@ namespace WebApi_SGI_T.Models.Migrations
                         .HasForeignKey("ScIdpersona")
                         .IsRequired()
                         .HasConstraintName("FK__tbl_sacra__sc_id__35BCFE0A");
+
+                    b.Navigation("ScIdMatrimonioNavigation");
 
                     b.Navigation("ScIdSacramentoNavigation");
 
@@ -584,6 +657,11 @@ namespace WebApi_SGI_T.Models.Migrations
                     b.Navigation("UsSexoNavigation");
                 });
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblMatrimonio", b =>
+                {
+                    b.Navigation("TblSacramentos");
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblPersona", b =>
                 {
                     b.Navigation("EsposaNavigation");
@@ -596,6 +674,11 @@ namespace WebApi_SGI_T.Models.Migrations
             modelBuilder.Entity("WebApi_SGI_T.Models.TblRol", b =>
                 {
                     b.Navigation("TblUserRols");
+                });
+
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblSacramento", b =>
+                {
+                    b.Navigation("ScConstancias");
                 });
 
             modelBuilder.Entity("WebApi_SGI_T.Models.TblSexo", b =>
@@ -620,6 +703,8 @@ namespace WebApi_SGI_T.Models.Migrations
             modelBuilder.Entity("WebApi_SGI_T.Models.TblUsuario", b =>
                 {
                     b.Navigation("TblUserRols");
+
+                    b.Navigation("UsConstancias");
                 });
 #pragma warning restore 612, 618
         }
