@@ -22,7 +22,6 @@ namespace WebApi_SGI_T.Controllers
         {
             var response = _certificationService.GeneratedPdfBase64(model);
 
-            //return Ok(new {fileName = "CertificadoBautismo.pdf", FileData = base64Pdf });
             return Ok(response);
         }
     }

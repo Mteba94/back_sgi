@@ -16,46 +16,7 @@ namespace WebApi_SGI_T.Imp
             _configuracion = configuration;
             _historicoConstanciasService = historicoConstanciasService;
         }
-        /*public string GeneratedPdfBase64(CertificationModel model)
-        {
-           
-            string templatePath = @"Models\Certification\html\bautismos.html";
-            string htmlTemplate = System.IO.File.ReadAllText(templatePath);
-
-            // Reemplazar los placeholders en el template HTML
-            string htmlContent = htmlTemplate
-                .Replace("{numero}", model.Numero)
-                .Replace("{folio}", model.Folio)
-                .Replace("{partida}", model.Partida)
-                .Replace("{dia}", model.Dia)
-                .Replace("{mes}", model.Mes)
-                .Replace("{anio}", model.Anio)
-                .Replace("{nombreBautizado}", model.NombreBautizado)
-                .Replace("{fechaNacimiento}", model.FechaNacimiento)
-                .Replace("{nombrePadre}", model.NombrePadre)
-                .Replace("{nombreMadre}", model.NombreMadre)
-                .Replace("{nombrePadrinos}", model.NombrePadrinos)
-                .Replace("{nombreSacerdote}", model.NombreSacerdote)
-                .Replace("{anotacionMarginal}", model.AnotacionMarginal)
-                .Replace("{diaExpedicion}", model.DiaExpedicion)
-                .Replace("{mesExpedicion}", model.MesExpedicion)
-                .Replace("{anioExpedicion}", model.AnioExpedicion);
-
-            // Crear una instancia del convertidor HTML a PDF
-            var converter = new HtmlToPdf();
-
-            // Configurar el tamaño de la página a tamaño carta
-            converter.Options.PdfPageSize = PdfPageSize.Letter; // Tamaño carta (8.5 x 11 pulgadas)
-            converter.Options.PdfPageOrientation = PdfPageOrientation.Portrait; // Orientación de la página
-
-            // Convertir el HTML a PDF
-            PdfDocument pdf = converter.ConvertHtmlString(htmlContent);
-
-            // Convertir el PDF a una cadena Base64
-            byte[] pdfBytes = pdf.Save();
-            return Convert.ToBase64String(pdfBytes);
-        }*/
-
+       
         public BaseResponse<ConstanciaResponse> GeneratedPdfBase64(CertificationModel model)
         {
             var response = new BaseResponse<ConstanciaResponse>();

@@ -1,0 +1,418 @@
+[
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CertificationController",
+    "Method": "GeneratePdf",
+    "RelativePath": "api/Certification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "WebApi_SGI_T.Models.Certification.CertificationModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.DashboardController",
+    "Method": "GetCantidadSacramentos",
+    "RelativePath": "api/Dashboard/CantidadSacramentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "GetHistoricoConstancias",
+    "RelativePath": "api/HistConstancia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "GenararCorrelativo",
+    "RelativePath": "api/HistConstancia/Correlativo/{sacramentoId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "HistConstanciaRegister",
+    "RelativePath": "api/HistConstancia/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.HistConstanciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "ListSacramentos",
+    "RelativePath": "api/Sacramento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "getSacramentoById",
+    "RelativePath": "api/Sacramento/{sacramentoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "getMatrimonioById",
+    "RelativePath": "api/Sacramento/Matrimonio/{sacramentoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "RegisterSacramento",
+    "RelativePath": "api/Sacramento/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.SacramentoRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "RegisterMatrimonio",
+    "RelativePath": "api/Sacramento/Register/Matrimonio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.MatrimonioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "UpdateSacramento",
+    "RelativePath": "api/Sacramento/Update/{sacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.SacramentoRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "UpdateMatrimonio",
+    "RelativePath": "api/Sacramento/Update/Matrimonio/{sacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.MatrimonioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
+    "Method": "RegisterTipoDocumento",
+    "RelativePath": "api/TipoDocumento/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoDocumentoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
+    "Method": "ListTipoDocumentoSelect",
+    "RelativePath": "api/TipoDocumento/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "ListTipoSacramento",
+    "RelativePath": "api/TipoSacramento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "GetTipoSacramento",
+    "RelativePath": "api/TipoSacramento/{tipoSacramentoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoSacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "CreateTipoSacramento",
+    "RelativePath": "api/TipoSacramento/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoSacramentoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "RemoveTipoSacramento",
+    "RelativePath": "api/TipoSacramento/Remove/{tipoSacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoSacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "ListTipoSacramentoSelect",
+    "RelativePath": "api/TipoSacramento/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSacramentoController",
+    "Method": "UpdateTipoSacramento",
+    "RelativePath": "api/TipoSacramento/Update/{tipoSacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoSacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoSacramentoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
+    "Method": "RegisterTipoSexo",
+    "RelativePath": "api/TipoSexo/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoSexoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
+    "Method": "ListTipoSexoSelect",
+    "RelativePath": "api/TipoSexo/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "GenerateToken",
+    "RelativePath": "api/Usuario/Generate/Token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/Usuario/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UsUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsPass",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsNombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsFechaNacimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsIdTipoDocumento",
+        "Type": "System.Byte",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsNumerodocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsDireccion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
