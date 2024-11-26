@@ -25,22 +25,6 @@ namespace WebApi_SGI_T.Imp
             };
             try
             {
-                //var data = await _context.TblSacramentos
-                //        .Join(_context.TblPersonas,
-                //            sac => sac.ScIdpersona,
-                //            pe => pe.PeIdpersona,
-                //            (sac, pe) => new { sac, pe })
-                //        .Join(_context.TblTipoSacramentos,
-                //            sacPe => sacPe.sac.ScIdTipoSacramento,
-                //            ts => ts.TsIdTipoSacramento,
-                //            (sacPe, ts) => new { ts.TsNombre })
-                //        .GroupBy(x => x.TsNombre)
-                //        .Select(group => new IndicadorSacramentosResponse
-                //        {
-                //            sacramentos = group.Key,
-                //            total = group.Count()
-                //        })
-                //        .ToListAsync();
 
                 var query = _context.TblSacramentos
                         .Join(_context.TblPersonas,
@@ -50,7 +34,7 @@ namespace WebApi_SGI_T.Imp
                         .Join(_context.TblTipoSacramentos,
                             sacPe => sacPe.sac.ScIdTipoSacramento,
                             ts => ts.TsIdTipoSacramento,
-                            (sacPe, ts) => new { sacPe.sac, sacPe.pe, ts.TsNombre })
+                            (sacPe, ts) => new { sacPe.sac, sacPe.pe, ts.TsNombre, sacPe.sac.ScFechaSacramento })
                         .Where(x => x.sac.ScDeleteDate == null && x.sac.ScDeleteUser == null)
                         .AsQueryable();
 
@@ -68,11 +52,12 @@ namespace WebApi_SGI_T.Imp
                 }
 
                 var data = await query
-                .GroupBy(x => x.TsNombre)
+                .GroupBy(x => new { x.TsNombre, anio = x.ScFechaSacramento.Year })
                 .Select(group => new IndicadorSacramentosResponse
                 {
-                    sacramentos = group.Key,
-                    total = group.Count()
+                    sacramentos = group.Key.TsNombre,
+                    total = group.Count(),
+                    anio = group.Key.anio
                 })
                 .ToListAsync();
 

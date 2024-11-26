@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.Authentication;
 using WebApi_SGI_T.Models.Commons.Request;
 
 namespace WebApi_SGI_T.Controllers
@@ -18,6 +19,7 @@ namespace WebApi_SGI_T.Controllers
             _historicoConstanciasService = historicoConstanciasService;
         }
 
+        [HasPermission(Permission.GetHistoricoConstancias)]
         [HttpPost]
         public async Task<IActionResult> GetHistoricoConstancias([FromBody] BaseFiltersRequest filters)
         {
@@ -26,6 +28,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.HistConstanciaRegister)]
         [HttpPost("Register")]
         public async Task<IActionResult> HistConstanciaRegister(HistConstanciaRequest request)
         {
@@ -34,6 +37,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.GenararCorrelativo)]
         [HttpPost("Correlativo/{sacramentoId:int}")]
         public async Task<IActionResult> GenararCorrelativo(int sacramentoId)
         {

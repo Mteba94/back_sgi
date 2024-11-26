@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.Authentication;
 using WebApi_SGI_T.Imp.FileStorage;
 
 namespace WebApi_SGI_T.Models.Extensions
@@ -23,6 +24,10 @@ namespace WebApi_SGI_T.Models.Extensions
             services.AddScoped<CertificationService>();
             services.AddScoped<HistoricoConstanciasService>();
             services.AddScoped<DashboardService>();
+            services.AddScoped<RolService>();
+            services.AddScoped<PermissionService>();
+            services.AddScoped<UserRolService>();
+            services.AddScoped<DataInitial>();
 
             services.AddSingleton<ImageStorage>();
             services.AddTransient<ImageService>();

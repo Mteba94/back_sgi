@@ -173,6 +173,11 @@ namespace WebApi_SGI_T.Models.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ro_idRol");
 
+                    b.Property<string>("Permissions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Permissions");
+
                     b.Property<string>("RoDescripcion")
                         .IsRequired()
                         .HasMaxLength(64)

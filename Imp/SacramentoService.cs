@@ -58,9 +58,8 @@ namespace WebApi_SGI_T.Imp
 
                 if (!string.IsNullOrEmpty(filters.StartDate) && !string.IsNullOrEmpty(filters.EndDate))
                 {
-                    var filteredData = response.Data.Items.Where(x => x.ScCreateDate >= Convert.ToDateTime(filters.StartDate)
-                                             && x.ScCreateDate <= Convert.ToDateTime(filters.EndDate).AddDays(1));
-                    response.Data.Items = filteredData.ToList();
+                    query = query.Where(x => x.ScFechaSacramento >= Convert.ToDateTime(filters.StartDate)
+                                             && x.ScFechaSacramento <= Convert.ToDateTime(filters.EndDate).AddDays(1));
                 }
 
                 var totalRecords = await query.CountAsync();

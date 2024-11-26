@@ -94,7 +94,7 @@ namespace WebApi_SGI_T.Imp
                 response.Data.TotalRecords = queryableData.Count();
 
                 response.Data.Items = OrderingHelper.Ordering(filters, queryableData, !(bool)filters.Download!).ToList();
-
+                
                 if (response.Data.Items is null)
                 {
                     response.IsSuccess = false;

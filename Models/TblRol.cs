@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using WebApi_SGI_T.Imp.Authentication;
 
 namespace WebApi_SGI_T.Models;
 
@@ -14,4 +15,6 @@ public partial class TblRol
     public byte RoEstado { get; set; }
 
     public virtual ICollection<TblUserRol> TblUserRols { get; set; } = new List<TblUserRol>();
+
+    public string Permissions { get; set; } = string.Empty;
 }

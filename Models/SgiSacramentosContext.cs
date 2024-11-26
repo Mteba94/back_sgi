@@ -121,6 +121,9 @@ public partial class SgiSacramentosContext : DbContext
                 .HasMaxLength(64)
                 .IsUnicode(false)
                 .HasColumnName("ro_nombre");
+            entity.Property(e => e.Permissions)
+                .HasColumnName("Permissions")
+                .IsRequired();
         });
 
         modelBuilder.Entity<TblSacramento>(entity =>

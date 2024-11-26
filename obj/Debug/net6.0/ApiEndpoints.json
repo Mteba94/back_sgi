@@ -80,6 +80,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi_SGI_T.Controllers.RolController",
+    "Method": "DeleteRol",
+    "RelativePath": "api/Rol/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.RolController",
+    "Method": "GetRolById",
+    "RelativePath": "api/Rol/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.RolController",
+    "Method": "RegisterRol",
+    "RelativePath": "api/Rol/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.RolRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.RolController",
+    "Method": "ListRolSelect",
+    "RelativePath": "api/Rol/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.RolController",
+    "Method": "UpdateRol",
+    "RelativePath": "api/Rol/Update/{rolId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rolId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.RolRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
     "Method": "ListSacramentos",
     "RelativePath": "api/Sacramento",
@@ -203,6 +282,38 @@
   },
   {
     "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
+    "Method": "GetTipoDocumentoById",
+    "RelativePath": "api/TipoDocumento/{tipoDocumentoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoDocumentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
+    "Method": "DeleteTipoDocumento",
+    "RelativePath": "api/TipoDocumento/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
     "Method": "RegisterTipoDocumento",
     "RelativePath": "api/TipoDocumento/Register",
     "HttpMethod": "POST",
@@ -225,6 +336,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoDocumentoController",
+    "Method": "UpdateTipoDocumento",
+    "RelativePath": "api/TipoDocumento/Update/{tipoDocumentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoDocumentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoDocumentoRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -324,6 +456,38 @@
   },
   {
     "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
+    "Method": "GetTipoSexoById",
+    "RelativePath": "api/TipoSexo/{idTipoGenero}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTipoGenero",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
+    "Method": "DeleteTipoSexo",
+    "RelativePath": "api/TipoSexo/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
     "Method": "RegisterTipoSexo",
     "RelativePath": "api/TipoSexo/Register",
     "HttpMethod": "POST",
@@ -349,6 +513,112 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi_SGI_T.Controllers.TipoSexoController",
+    "Method": "UpdateTipoSexo",
+    "RelativePath": "api/TipoSexo/Update/{idTipoGenero}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTipoGenero",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.TipoSexoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UserRolController",
+    "Method": "RegisterUserRol",
+    "RelativePath": "api/UserRol/Assign/{userId}/{roleId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UserRolController",
+    "Method": "DeleteUserRol",
+    "RelativePath": "api/UserRol/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UserRolController",
+    "Method": "GetUserRolById",
+    "RelativePath": "api/UserRol/GetById/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "GetUsuarioByUserName",
+    "RelativePath": "api/Usuario/{userName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "DeleteUsuario",
+    "RelativePath": "api/Usuario/Delete",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
     "Method": "GenerateToken",
     "RelativePath": "api/Usuario/Generate/Token",
@@ -359,6 +629,22 @@
       {
         "Name": "requestDto",
         "Type": "WebApi_SGI_T.Models.Commons.Request.TokenRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "ListUsuarios",
+    "RelativePath": "api/Usuario/List",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
         "IsRequired": true
       }
     ],
@@ -405,6 +691,88 @@
       {
         "Name": "UsNumerodocumento",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsIdGenero",
+        "Type": "System.Byte",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsDireccion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "ResetPass",
+    "RelativePath": "api/Usuario/Reset/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.UsuarioController",
+    "Method": "UpdateUsuario",
+    "RelativePath": "api/Usuario/Update/{userId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "UsUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsPass",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsImage",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsNombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsFechaNacimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsIdTipoDocumento",
+        "Type": "System.Byte",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsNumerodocumento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsIdGenero",
+        "Type": "System.Byte",
         "IsRequired": false
       },
       {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using WebApi_SGI_T.Models;
 using WebApi_SGI_T.Models.Commons.Helpers;
 using WebApi_SGI_T.Models.Commons.Request;
@@ -12,11 +13,13 @@ namespace WebApi_SGI_T.Imp
     {
         private readonly SgiSacramentosContext _context;
         private readonly SacramentoService _sacramentoService;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public HistoricoConstanciasService(SgiSacramentosContext context, SacramentoService sacramentoService)
+        public HistoricoConstanciasService(SgiSacramentosContext context, SacramentoService sacramentoService, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _sacramentoService = sacramentoService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<BaseResponse<BaseEntityResponse<HistConstanciaResponse>>> GetHistoricoConstancias(BaseFiltersRequest filters)
@@ -107,6 +110,8 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
+                var currentUserId = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
                 var maxId = 0;
 
                 try
@@ -131,7 +136,7 @@ namespace WebApi_SGI_T.Imp
                     ct_SacramentoId = request.ct_SacramentoId,
                     ct_Correlativo = nuevoCorrelativo,
                     ct_FormatoCorrelativo = request.ct_correlativo,
-                    ct_UsuarioId = 1,
+                    ct_UsuarioId = currentUserId,
                     ct_FechaImpresion = DateTime.Now
                 };
 

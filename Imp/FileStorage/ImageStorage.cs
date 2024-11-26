@@ -1,82 +1,68 @@
-﻿using WebApi_SGI_T.Models;
-
-namespace WebApi_SGI_T.Imp.FileStorage
+﻿namespace WebApi_SGI_T.Imp.FileStorage
 {
     public class ImageStorage
     {
-        private readonly string _storagePath;
+        //private readonly string _storagePath;
 
-        public ImageStorage(IConfiguration configuration)
+        //public ImageStorage(IConfiguration configuration)
+        //{
+        //    var storagePath = configuration["Storage:Path"];
+        //    if (string.IsNullOrEmpty(storagePath))
+        //    {
+        //        throw new InvalidOperationException("Storage path is not configured.");
+        //    }
+
+        //    _storagePath = Path.Combine(AppContext.BaseDirectory, storagePath);
+        //    Directory.CreateDirectory(_storagePath);
+        //}
+
+        public async Task<string> SaveFile(string container, IFormFile file, string webRootPath, string scheme, string host)
         {
-            var storagePath = configuration["Storage:Path"];
-            if (string.IsNullOrEmpty(storagePath))
+            var extension = Path.GetExtension(file.FileName);
+            var fileName = $"{Guid.NewGuid()}{extension}";
+            string folder = Path.Combine(webRootPath, container);
+
+            if (!Directory.Exists(folder))
             {
-                throw new InvalidOperationException("Storage path is not configured.");
+                Directory.CreateDirectory(folder);
             }
 
-            _storagePath = Path.Combine(AppContext.BaseDirectory, storagePath);
-            Directory.CreateDirectory(_storagePath);
+            string filePath = Path.Combine(folder, fileName);
+
+            using (var memoryStream = new MemoryStream())
+            {
+                await file.CopyToAsync(memoryStream);
+                var content = memoryStream.ToArray();
+                await File.WriteAllBytesAsync(filePath, content);
+            }
+
+            var currentUrl = $"{scheme}://{host}";
+            var pathDb = Path.Combine(currentUrl, container, fileName).Replace("\\", "/");
+            return pathDb;
         }
 
-        public async Task<string> SaveFile(string container, IFormFile file)
+        public async Task<string> UpdateFile(string container, IFormFile newFile, string route, string webRootPath, string scheme, string host)
         {
-            if (file == null || file.Length == 0)
-            {
-                throw new ArgumentException("No file provided.");
-            }
-
-            var containerPath = Path.Combine(_storagePath, container);
-            Directory.CreateDirectory(containerPath);
-
-            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-            var filePath = Path.Combine(containerPath, fileName);
-
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-
-            return filePath;
+            await DeleteFile(route, container, webRootPath);
+            return await SaveFile(container, newFile, webRootPath, scheme, host);
         }
 
-        public async Task<string> UpdateFile(string container, string existingFilePath, IFormFile newFile)
+        public Task DeleteFile(string route, string container, string webRootPath)
         {
-            if (newFile == null || newFile.Length == 0)
+            if (string.IsNullOrEmpty(route))
             {
-                throw new ArgumentException("No file provided.");
+                return Task.CompletedTask;
+            }
+            
+            var fileName = Path.GetFileName(route);
+            var directoryFile = Path.Combine(webRootPath, container, fileName);
+
+            if(File.Exists(directoryFile))
+            {
+                File.Delete(directoryFile);
             }
 
-            // Eliminar el archivo existente si existe
-            if (File.Exists(existingFilePath))
-            {
-                File.Delete(existingFilePath);
-            }
-
-            // Guardar el nuevo archivo
-            var containerPath = Path.Combine(_storagePath, container);
-            Directory.CreateDirectory(containerPath);
-
-            var newFileName = Guid.NewGuid().ToString() + Path.GetExtension(newFile.FileName);
-            var newFilePath = Path.Combine(containerPath, newFileName);
-
-            using (var stream = new FileStream(newFilePath, FileMode.Create))
-            {
-                await newFile.CopyToAsync(stream);
-            }
-
-            return newFilePath;
-        }
-
-        public void DeleteFile(string filePath)
-        {
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-            else
-            {
-                throw new FileNotFoundException("File not found.", filePath);
-            }
+            return Task.CompletedTask;
         }
 
     }

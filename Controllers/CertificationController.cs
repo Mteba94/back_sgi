@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.Authentication;
 using WebApi_SGI_T.Models.Certification;
 
 namespace WebApi_SGI_T.Controllers
@@ -17,12 +18,20 @@ namespace WebApi_SGI_T.Controllers
             _certificationService = certificationService;
         }
 
+        [HasPermission(Permission.GeneratePdf)]
         [HttpPost]
         public IActionResult GeneratePdf([FromBody] CertificationModel model)
         {
-            var response = _certificationService.GeneratedPdfBase64(model);
-
-            return Ok(response);
+            try
+            {
+                var response = _certificationService.GeneratedPdfBase64(model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
 }

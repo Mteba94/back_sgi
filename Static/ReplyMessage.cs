@@ -13,5 +13,10 @@
         public static string MESSAGE_TOKEN_ERROR = "Nombre de usuario o contraseña no válidos.";
         public static string MESSAGE_VALIDATE = "Errores de validacion.";
         public static string MESSAGE_FAILED = "Ocurrio un error al procesar la solicitud!";
+
+        //USER ERRORS
+        public const string MESSAGE_USERNAME = "El nombre de usuario es oblicatorio!";
+        public const string MESSAGE_FAILED_PASS = "La contraseña debe tener al menos 8 caracteres.";
+        public const string MESSAGE_FAILED_MIN_PASS = "La contraseña debe tener al menos 8 caracteres.";
     }
 }

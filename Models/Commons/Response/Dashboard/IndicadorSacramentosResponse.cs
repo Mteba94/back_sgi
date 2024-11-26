@@ -4,5 +4,6 @@
     {
         public string? sacramentos {  get; set; }
         public int? total { get; set; }
+        public int? anio { get; set; }
     }
 }

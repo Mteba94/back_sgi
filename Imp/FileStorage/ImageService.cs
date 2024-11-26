@@ -2,35 +2,39 @@
 {
     public class ImageService
     {
+        private readonly IWebHostEnvironment _env;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ImageStorage _imageStorage;
 
-        public ImageService(ImageStorage imageStorage)
+        public ImageService(ImageStorage imageStorage, IWebHostEnvironment env, IHttpContextAccessor httpContextAccessor)
         {
             _imageStorage = imageStorage;
+            _env = env;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<string> SaveImage(IFormFile image, string container)
         {
-            if (image == null || image.Length == 0)
-            {
-                throw new ArgumentException("No image provided.");
-            }
+            var webRootPath = _env.WebRootPath;
+            var scheme = _httpContextAccessor.HttpContext!.Request.Scheme;
+            var host = _httpContextAccessor.HttpContext!.Request.Host;
 
-            var imageUrl = await _imageStorage.SaveFile(container, image);
-            return imageUrl;
+            return await _imageStorage.SaveFile(container, image, webRootPath, scheme, host.Value);
         }
 
-        public async Task<string> UpdateUserImage(string container, string existingFilePath, IFormFile newImage)
+        public async Task<string> UpdateUserImage(string container, string route, IFormFile newImage)
         {
-            var newFilePath = await _imageStorage.UpdateFile(container, existingFilePath, newImage);
-            // Actualiza la información del usuario en la base de datos con la nueva ruta de la imagen
-            return newFilePath;
+            var webRootPath = _env.WebRootPath;
+            var scheme = _httpContextAccessor.HttpContext!.Request.Scheme;
+            var host = _httpContextAccessor.HttpContext!.Request.Host;
+
+            return await _imageStorage.UpdateFile(container, newImage, route, webRootPath, scheme, host.Value);
         }
 
-        public void RemoveUserImage(string filePath)
+        public async Task RemoveUserImage(string route, string container)
         {
-            _imageStorage.DeleteFile(filePath);
-            // Elimina la referencia de la imagen en la base de datos si es necesario
+            var webRootPath = _env.WebRootPath;
+            await _imageStorage.DeleteFile(route, container, webRootPath);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApi_SGI_T.Imp;
+using WebApi_SGI_T.Imp.Authentication;
 using WebApi_SGI_T.Models.Commons.Request;
 
 namespace WebApi_SGI_T.Controllers
@@ -17,6 +18,7 @@ namespace WebApi_SGI_T.Controllers
             _tipoSacramentoService = tipoSacramentoService;
         }
 
+        [HasPermission(Permission.ListTipoSacramento)]
         [HttpPost]
         public IActionResult ListTipoSacramento([FromBody] BaseFiltersRequest filters)
         {
@@ -24,6 +26,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.ListTipoSacramentoSelect)]
         [HttpGet("Select")]
         public IActionResult ListTipoSacramentoSelect()
         {
@@ -31,6 +34,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.GetTipoSacramento)]
         [HttpGet("{tipoSacramentoId:int}")]
         public IActionResult GetTipoSacramento(int tipoSacramentoId)
         {
@@ -38,6 +42,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.CreateTipoSacramento)]
         [HttpPost("Register")]
         public async Task<IActionResult> CreateTipoSacramento([FromBody] TipoSacramentoRequest request)
         {
@@ -45,6 +50,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.UpdateTipoSacramento)]
         [HttpPut("Update/{tipoSacramentoId:int}")]
         public async Task<IActionResult> UpdateTipoSacramento(int tipoSacramentoId, [FromBody] TipoSacramentoRequest request)
         {
@@ -52,6 +58,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.RemoveTipoSacramento)]
         [HttpPut("Remove/{tipoSacramentoId:int}")]
         public async Task<IActionResult> RemoveTipoSacramento(int tipoSacramentoId)
         {

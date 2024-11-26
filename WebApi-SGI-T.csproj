@@ -11,6 +11,7 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="itext7" Version="7.2.6" />
     <PackageReference Include="iTextSharp" Version="5.5.13.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
@@ -23,6 +24,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="PDFsharp" Version="6.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.4.3" />
   </ItemGroup>
@@ -30,6 +32,12 @@
   <ItemGroup>
     <Folder Include="Models\Certification\img\" />
     <Folder Include="Models\Certification\html\" />
+    <Folder Include="Static\Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\certificacion\logo-parroquia.png" />
+    <None Include="wwwroot\certificacion\Montserrat.ttf" />
   </ItemGroup>
 
 </Project>

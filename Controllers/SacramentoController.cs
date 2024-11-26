@@ -19,7 +19,7 @@ namespace WebApi_SGI_T.Controllers
             _sacramentoService = sacramentoService;
         }
 
-        //[HasPermission(Permission.ListSacramentos)]
+        [HasPermission(Permission.ListSacramentos)]
         [HttpPost]
         public async Task<IActionResult> ListSacramentos([FromBody] BaseFiltersRequest filters)
         {
@@ -27,6 +27,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.getSacramentoById)]
         [HttpGet("{sacramentoId:int}")]
         public async Task<IActionResult> getSacramentoById(int sacramentoId)
         {
@@ -34,6 +35,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.getMatrimonioById)]
         [HttpGet("Matrimonio/{sacramentoId:int}")]
         public async Task<IActionResult> getMatrimonioById(int sacramentoId)
         {
@@ -41,6 +43,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.RegisterSacramento)]
         [HttpPost("Register")]
         public async Task<IActionResult> RegisterSacramento([FromBody] SacramentoRequestDto request)
         {
@@ -48,6 +51,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.RegisterMatrimonio)]
         [HttpPost("Register/Matrimonio")]
         public async Task<IActionResult> RegisterMatrimonio([FromBody] MatrimonioRequest request)
         {
@@ -55,6 +59,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.UpdateSacramento)]
         [HttpPut("Update/{sacramentoId:int}")]
         public async Task<IActionResult> UpdateSacramento(int sacramentoId, [FromBody] SacramentoRequestDto request)
         {
@@ -62,6 +67,7 @@ namespace WebApi_SGI_T.Controllers
             return Ok(response);
         }
 
+        [HasPermission(Permission.UpdateMatrimonio)]
         [HttpPut("Update/Matrimonio/{sacramentoId:int}")]
         public async Task<IActionResult> UpdateMatrimonio(int sacramentoId, [FromBody] MatrimonioRequest request)
         {
