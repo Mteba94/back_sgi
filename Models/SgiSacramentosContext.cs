@@ -35,6 +35,8 @@ public partial class SgiSacramentosContext : DbContext
     public virtual DbSet<TblMatrimonio> TblMatrimonios { get; set; }
 
     public virtual DbSet<TblConstancias> TblConstancias { get; set; }
+    public virtual DbSet<TblSacerdote> TblSacerdotes { get; set; }
+    public virtual DbSet<TblCategoriaSacerdote> TblCategoriaSacerdotes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -172,10 +174,8 @@ public partial class SgiSacramentosContext : DbContext
                 .HasMaxLength(64)
                 .IsUnicode(false)
                 .HasColumnName("sc_padrino");
-            entity.Property(e => e.ScParroco)
-                .HasMaxLength(64)
-                .IsUnicode(false)
-                .HasColumnName("sc_parroco");
+            entity.Property(e => e.ScParrocoId)
+                .HasColumnName("sc_parrocoId");
             entity.Property(e => e.ScUpdateDate)
                 .HasColumnType("datetime")
                 .HasColumnName("sc_update_date");
@@ -196,6 +196,12 @@ public partial class SgiSacramentosContext : DbContext
                 .HasForeignKey(d => d.ScIdMatrimonio)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__tbl_sacra__sc_id__37A5467C");
+
+            entity.HasOne(d => d.Sacerdote)
+                .WithMany(p => p.TblSacramentos)
+                .HasForeignKey(d => d.ScParrocoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__tbl_sacra__sc_parroco_id");
         });
 
         modelBuilder.Entity<TblTipoDocumento>(entity =>
@@ -437,6 +443,95 @@ public partial class SgiSacramentosContext : DbContext
                 .HasForeignKey(d => d.ct_UsuarioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_tbl_const_ct_Us_3A81BR328");
+
+        });
+
+        modelBuilder.Entity<TblSacerdote>(entity =>
+        {
+            entity.HasKey(e => e.ScId).HasName("PK__tbl_sace__D3A3E3A3A3A3A3A5");
+
+            entity.ToTable("tbl_sacerdotes");
+
+            entity.Property(e => e.ScId)
+                .ValueGeneratedNever()
+                .HasColumnName("sa_idSacerdote");
+
+            entity.Property(e => e.ScNombre)
+                .HasMaxLength(64)
+                .IsUnicode(false)
+                .HasColumnName("sa_nombre");
+
+            entity.Property(e => e.ScIdCategoria)
+                .HasColumnName("sa_categoria");
+
+            entity.Property(e => e.ScFirma)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("sa_firma");
+
+            entity.Property(e => e.ScCreateDate)
+                .HasColumnType("datetime")
+                .HasColumnName("sa_create_date");
+
+            entity.Property(e => e.ScCreateUser)
+                .HasColumnName("sa_create_user");
+
+            entity.Property(e => e.ScUpdateDate)
+                .HasColumnType("datetime")
+                .HasColumnName("sa_update_date");
+
+            entity.Property(e => e.ScUpdateUser)
+                .HasColumnName("sa_update_user");
+
+            entity.Property(e => e.ScDeleteDate)
+                .HasColumnType("datetime")
+                .HasColumnName("sa_delete_date");
+
+            entity.Property(e => e.ScDeleteUser)
+                .HasColumnName("sa_delete_user");
+
+            entity.HasOne(d => d.ScIdCategoriaNavigation)
+                .WithMany(p => p.TblSacerdote)
+                .HasForeignKey(d => d.ScIdCategoria)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TblSacerdote_TblCategoriaSacerdote");
+
+            entity.HasMany(d => d.TblSacramentos)
+                .WithOne(p => p.Sacerdote)
+                .HasForeignKey(p => p.ScParrocoId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TblSacramento_TblSacerdote");
+
+        });
+
+        modelBuilder.Entity<TblCategoriaSacerdote>(entity =>
+        {
+            entity.HasKey(e => e.CsId).HasName("PK__tbl_cate__D3A3E3A3A3A3A3A6");
+
+            entity.ToTable("tbl_categoria_sacerdote");
+
+            entity.Property(e => e.CsId)
+                .ValueGeneratedNever()
+                .HasColumnName("cs_idCategoria");
+
+            entity.Property(e => e.CsNombre)
+                .HasMaxLength(64)
+                .IsUnicode(false)
+                .HasColumnName("cs_nombre");
+
+            entity.Property(e => e.CsAbreviacion)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("cs_descripcion");
+
+            entity.Property(e => e.CsEstado)
+                .HasColumnName("cs_estado");
+
+            entity.HasMany(d => d.TblSacerdote)
+                .WithOne(p => p.ScIdCategoriaNavigation)
+                .HasForeignKey(p => p.ScIdCategoria)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_TblSacerdote_TblCategoriaSacerdote");
 
         });
 

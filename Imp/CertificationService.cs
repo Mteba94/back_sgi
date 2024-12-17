@@ -445,7 +445,7 @@ namespace WebApi_SGI_T.Imp
 
             doc.Add(new Paragraph(" ") { SpacingAfter = 20 });
 
-            doc.Add(new Paragraph($"Pbro. {model.NombreSacerdote}, FMM", subtitulo)
+            doc.Add(new Paragraph($"{model.SacerdoteCat}. {model.SacerdoteFirma}, FMM", subtitulo)
             {
                 SpacingBefore = 100,
                 Alignment = Element.ALIGN_CENTER

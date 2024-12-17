@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\controllers\\categoriasacerdotecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:controllers\\categoriasacerdotecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\authentication\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\authentication\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\controllers\\sacerdotecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:controllers\\sacerdotecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\categoriasacerdoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\categoriasacerdoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\sacerdoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\sacerdoteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\firmaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\firmaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\imp\\tiposacramentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:imp\\tiposacramentoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|c:\\users\\geova\\onedrive\\escritorio\\informacion tesis\\sistema\\api\\webapi-sgi-t\\models\\certification\\certificationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FEE8094-F59F-47E0-A95B-9AAF982DD78E}|WebApi-SGI-T.csproj|solutionrelative:models\\certification\\certificationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,51 +55,111 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CategoriaSacerdoteController.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\CategoriaSacerdoteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaSacerdoteController.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\CategoriaSacerdoteController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaSacerdoteController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T22:43:49.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\DashboardService.cs",
+              "RelativeDocumentMoniker": "Imp\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\DashboardService.cs",
+              "RelativeToolTip": "Imp\\DashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:44:29.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SacerdoteService.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\SacerdoteService.cs",
+              "RelativeDocumentMoniker": "Imp\\SacerdoteService.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\SacerdoteService.cs",
+              "RelativeToolTip": "Imp\\SacerdoteService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAUwEsAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:35:10.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FirmaService.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\FirmaService.cs",
+              "RelativeDocumentMoniker": "Imp\\FirmaService.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\FirmaService.cs",
+              "RelativeToolTip": "Imp\\FirmaService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwCAAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:33:08.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CertificationModel.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Models\\Certification\\CertificationModel.cs",
+              "RelativeDocumentMoniker": "Models\\Certification\\CertificationModel.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Models\\Certification\\CertificationModel.cs",
+              "RelativeToolTip": "Models\\Certification\\CertificationModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA9wBsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T19:19:33.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "CertificationService.cs",
               "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\CertificationService.cs",
               "RelativeDocumentMoniker": "Imp\\CertificationService.cs",
               "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\CertificationService.cs",
               "RelativeToolTip": "Imp\\CertificationService.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAwJIDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJsBAAAAAAAAAAAvwLoAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T18:46:55.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TipoSacramentoService.cs",
-              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\TipoSacramentoService.cs",
-              "RelativeDocumentMoniker": "Imp\\TipoSacramentoService.cs",
-              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\TipoSacramentoService.cs",
-              "RelativeToolTip": "Imp\\TipoSacramentoService.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAuwFAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T06:25:09.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "Imp\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\UsuarioService.cs",
-              "RelativeToolTip": "Imp\\UsuarioService.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAYwGIAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T04:45:28.106Z"
+              "WhenOpened": "2024-12-16T19:15:53.072Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAvwEIAAAAbAAAAAAAAAA==",
+              "Title": "SacerdoteController.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\SacerdoteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SacerdoteController.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Controllers\\SacerdoteController.cs",
+              "RelativeToolTip": "Controllers\\SacerdoteController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA4wBUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T18:40:53.889Z"
+              "WhenOpened": "2024-12-16T16:26:38.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriaSacerdoteService.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\CategoriaSacerdoteService.cs",
+              "RelativeDocumentMoniker": "Imp\\CategoriaSacerdoteService.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\CategoriaSacerdoteService.cs",
+              "RelativeToolTip": "Imp\\CategoriaSacerdoteService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwDcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T14:08:18.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Permission.cs",
+              "DocumentMoniker": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\Authentication\\Permission.cs",
+              "RelativeDocumentMoniker": "Imp\\Authentication\\Permission.cs",
+              "ToolTip": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\Imp\\Authentication\\Permission.cs",
+              "RelativeToolTip": "Imp\\Authentication\\Permission.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAewEsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:20:58.925Z"
             }
           ]
         }

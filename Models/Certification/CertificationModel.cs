@@ -26,5 +26,7 @@
         public string? DiaExpedicion { get; set; }
         public string? MesExpedicion { get; set; }
         public string? AnioExpedicion { get; set; }
+        public string? SacerdoteFirma { get; set; }
+        public string? SacerdoteCat { get; set; }
     }
 }

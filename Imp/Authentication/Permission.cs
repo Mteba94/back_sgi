@@ -63,5 +63,26 @@
         //UserRolController
         RegisterUserRol = 40,
         DeleteUserRol = 41,
+
+        //CategoriaSacerdoteController
+        ListCategoriaSacerdoteSelect = 42,
+        RegisterCategoriaSacerdote = 43,
+        GetCategoriaSacerdoteById = 44,
+        UpdateCategoriaSacerdote = 45,
+        DeleteCategoriaSacerdote = 46,
+        ListCategoriaSacerdote = 47,
+
+        //SacerdoteController
+        ListSacerdote = 48,
+        GetSacerdoteById = 49,
+        RegisterSacerdote = 50,
+        UpdateSacerdote = 51,
+        DeleteSacerdote = 52,
+        ListSelectSacerdote = 53,
+
+        //FirmaController
+        ListSelectFirma = 54,
+        RegisterFirma = 55,
+        DeleteFirma = 56,
     }
 }

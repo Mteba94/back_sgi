@@ -23,6 +23,34 @@ namespace WebApi_SGI_T.Models.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblCategoriaSacerdote", b =>
+                {
+                    b.Property<int>("CsId")
+                        .HasColumnType("int")
+                        .HasColumnName("cs_idCategoria");
+
+                    b.Property<string>("CsAbreviacion")
+                        .HasMaxLength(100)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("cs_descripcion");
+
+                    b.Property<int>("CsEstado")
+                        .HasColumnType("int")
+                        .HasColumnName("cs_estado");
+
+                    b.Property<string>("CsNombre")
+                        .HasMaxLength(64)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(64)")
+                        .HasColumnName("cs_nombre");
+
+                    b.HasKey("CsId")
+                        .HasName("PK__tbl_cate__D3A3E3A3A3A3A3A6");
+
+                    b.ToTable("tbl_categoria_sacerdote", (string)null);
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblConstancias", b =>
                 {
                     b.Property<int>("ct_ConstanciaId")
@@ -202,6 +230,63 @@ namespace WebApi_SGI_T.Models.Migrations
                     b.ToTable("tbl_rol", (string)null);
                 });
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblSacerdote", b =>
+                {
+                    b.Property<int>("ScId")
+                        .HasColumnType("int")
+                        .HasColumnName("sa_idSacerdote");
+
+                    b.Property<DateTime>("ScCreateDate")
+                        .HasColumnType("datetime")
+                        .HasColumnName("sa_create_date");
+
+                    b.Property<int>("ScCreateUser")
+                        .HasColumnType("int")
+                        .HasColumnName("sa_create_user");
+
+                    b.Property<DateTime?>("ScDeleteDate")
+                        .HasColumnType("datetime")
+                        .HasColumnName("sa_delete_date");
+
+                    b.Property<int?>("ScDeleteUser")
+                        .HasColumnType("int")
+                        .HasColumnName("sa_delete_user");
+
+                    b.Property<int>("ScEstado")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ScFirma")
+                        .HasMaxLength(100)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("sa_firma");
+
+                    b.Property<int>("ScIdCategoria")
+                        .HasColumnType("int")
+                        .HasColumnName("sa_categoria");
+
+                    b.Property<string>("ScNombre")
+                        .HasMaxLength(64)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(64)")
+                        .HasColumnName("sa_nombre");
+
+                    b.Property<DateTime?>("ScUpdateDate")
+                        .HasColumnType("datetime")
+                        .HasColumnName("sa_update_date");
+
+                    b.Property<int?>("ScUpdateUser")
+                        .HasColumnType("int")
+                        .HasColumnName("sa_update_user");
+
+                    b.HasKey("ScId")
+                        .HasName("PK__tbl_sace__D3A3E3A3A3A3A3A5");
+
+                    b.HasIndex("ScIdCategoria");
+
+                    b.ToTable("tbl_sacerdotes", (string)null);
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblSacramento", b =>
                 {
                     b.Property<int>("ScIdSacramento")
@@ -275,11 +360,9 @@ namespace WebApi_SGI_T.Models.Migrations
                         .HasColumnType("varchar(64)")
                         .HasColumnName("sc_padrino");
 
-                    b.Property<string>("ScParroco")
-                        .HasMaxLength(64)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(64)")
-                        .HasColumnName("sc_parroco");
+                    b.Property<int?>("ScParrocoId")
+                        .HasColumnType("int")
+                        .HasColumnName("sc_parrocoId");
 
                     b.Property<DateTime?>("ScUpdateDate")
                         .HasColumnType("datetime")
@@ -298,6 +381,8 @@ namespace WebApi_SGI_T.Models.Migrations
                         .IsUnique();
 
                     b.HasIndex("ScIdpersona");
+
+                    b.HasIndex("ScParrocoId");
 
                     b.ToTable("tbl_sacramentos", (string)null);
                 });
@@ -599,6 +684,17 @@ namespace WebApi_SGI_T.Models.Migrations
                     b.Navigation("PeSexoNavigation");
                 });
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblSacerdote", b =>
+                {
+                    b.HasOne("WebApi_SGI_T.Models.TblCategoriaSacerdote", "ScIdCategoriaNavigation")
+                        .WithMany("TblSacerdote")
+                        .HasForeignKey("ScIdCategoria")
+                        .IsRequired()
+                        .HasConstraintName("FK_TblSacerdote_TblCategoriaSacerdote");
+
+                    b.Navigation("ScIdCategoriaNavigation");
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblSacramento", b =>
                 {
                     b.HasOne("WebApi_SGI_T.Models.TblMatrimonio", "ScIdMatrimonioNavigation")
@@ -617,6 +713,13 @@ namespace WebApi_SGI_T.Models.Migrations
                         .HasForeignKey("ScIdpersona")
                         .IsRequired()
                         .HasConstraintName("FK__tbl_sacra__sc_id__35BCFE0A");
+
+                    b.HasOne("WebApi_SGI_T.Models.TblSacerdote", "Sacerdote")
+                        .WithMany("TblSacramentos")
+                        .HasForeignKey("ScParrocoId")
+                        .HasConstraintName("FK_TblSacramento_TblSacerdote");
+
+                    b.Navigation("Sacerdote");
 
                     b.Navigation("ScIdMatrimonioNavigation");
 
@@ -662,6 +765,11 @@ namespace WebApi_SGI_T.Models.Migrations
                     b.Navigation("UsSexoNavigation");
                 });
 
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblCategoriaSacerdote", b =>
+                {
+                    b.Navigation("TblSacerdote");
+                });
+
             modelBuilder.Entity("WebApi_SGI_T.Models.TblMatrimonio", b =>
                 {
                     b.Navigation("TblSacramentos");
@@ -679,6 +787,11 @@ namespace WebApi_SGI_T.Models.Migrations
             modelBuilder.Entity("WebApi_SGI_T.Models.TblRol", b =>
                 {
                     b.Navigation("TblUserRols");
+                });
+
+            modelBuilder.Entity("WebApi_SGI_T.Models.TblSacerdote", b =>
+                {
+                    b.Navigation("TblSacramentos");
                 });
 
             modelBuilder.Entity("WebApi_SGI_T.Models.TblSacramento", b =>

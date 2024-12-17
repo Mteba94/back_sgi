@@ -8,15 +8,18 @@ using System.Linq.Dynamic.Core;
 using WebApi_SGI_T.Static;
 using Microsoft.Data.SqlClient;
 using Azure.Core;
+using System.Security.Claims;
 
 namespace WebApi_SGI_T.Imp
 {
     public class SacramentoService
     {
         private readonly SgiSacramentosContext _context;
-        public SacramentoService(SgiSacramentosContext context)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public SacramentoService(SgiSacramentosContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<BaseResponse<BaseEntityResponse<SacramentoResponse>>> ListSacramentos(BaseFiltersRequest filters)
@@ -133,7 +136,7 @@ namespace WebApi_SGI_T.Imp
                         ScNombrePadrino = query.ScPadrino,
                         ScNombreMadrina = query.ScMadrina,
                         ScFechaSacramento = query.ScFechaSacramento,
-                        ScParroco = query.ScParroco,
+                        ScParrocoId = query.ScParrocoId,
                         ScObservaciones = query.ScObservaciones,
                         ScCreateDate = query.ScCreateDate
                     };
@@ -210,7 +213,7 @@ namespace WebApi_SGI_T.Imp
                             ScMadreEsposa = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScMadre,
                             ScTestigo1 = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScPadrino,
                             ScTestigo2 = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScMadrina,
-                            ScParroco = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScParroco,
+                            ScParrocoId = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScParrocoId,
                             ScFechaSacramento = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScFechaSacramento,
                             ScObservaciones = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScObservaciones
                         };
@@ -246,7 +249,7 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
-                var createUser = 1;
+                var createUser = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 var createDate = DateTime.Now;
 
                 con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
@@ -311,7 +314,7 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
-                var createUser = 1;
+                var createUser = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 var createDate = DateTime.Now;
 
                 con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
@@ -385,7 +388,7 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
-                var createUser = 1;
+                var createUser = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
                 var createDate = DateTime.Now;
 
                 con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
@@ -464,7 +467,7 @@ namespace WebApi_SGI_T.Imp
 
                 if (matrimonio.Data != null)
                 {
-                    var createUser = 1;
+                    var createUser = int.Parse(_httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value);
                     var createDate = DateTime.Now;
 
                     cmd.Parameters.Add(new SqlParameter("@i_operacion", "AME"));

@@ -28,7 +28,7 @@
         public string? ScMadreEsposa { get; set; }
         public string? ScTestigo1 { get; set; }
         public string? ScTestigo2 { get; set; }
-        public string? ScParroco { get; set; }
+        public int? ScParrocoId { get; set; }
         public DateTime? ScFechaSacramento { get; set; }
         public string? ScObservaciones { get; set; }
     }

@@ -1,5 +1,100 @@
 [
   {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "GetCategoriaSacerdoteById",
+    "RelativePath": "api/CategoriaSacerdote/{categoriaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "DeleteCategoriaSacerdote",
+    "RelativePath": "api/CategoriaSacerdote/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "ListCategoriaSacerdote",
+    "RelativePath": "api/CategoriaSacerdote/List",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "RegisterCategoriaSacerdote",
+    "RelativePath": "api/CategoriaSacerdote/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.CategoriaSacerdoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "ListCategoriaSacerdoteSelect",
+    "RelativePath": "api/CategoriaSacerdote/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.CategoriaSacerdoteController",
+    "Method": "UpdateCategoriaSacerdote",
+    "RelativePath": "api/CategoriaSacerdote/Update/{categoriaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoriaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.CategoriaSacerdoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi_SGI_T.Controllers.CertificationController",
     "Method": "GeneratePdf",
     "RelativePath": "api/Certification",
@@ -26,6 +121,48 @@
       {
         "Name": "filters",
         "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.FirmaController",
+    "Method": "DeleteFirma",
+    "RelativePath": "api/Firma/DeleteFirma",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.FirmaController",
+    "Method": "ListSelectFirma",
+    "RelativePath": "api/Firma/ListSelectFirma",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.FirmaController",
+    "Method": "RegisterFirma",
+    "RelativePath": "api/Firma/RegisterFirma/{sacerdoteId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacerdoteId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -153,6 +290,101 @@
       {
         "Name": "request",
         "Type": "WebApi_SGI_T.Models.Commons.Request.RolRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "GetSacerdoteById",
+    "RelativePath": "api/Sacerdote/{sacerdoteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacerdoteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "DeleteSacerdote",
+    "RelativePath": "api/Sacerdote/Delete/{sacerdoteId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacerdoteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "ListSacerdote",
+    "RelativePath": "api/Sacerdote/List",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "RegisterSacerdote",
+    "RelativePath": "api/Sacerdote/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.SacerdoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "ListSelectSacerdote",
+    "RelativePath": "api/Sacerdote/Select",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacerdoteController",
+    "Method": "UpdateSacerdote",
+    "RelativePath": "api/Sacerdote/Update/{sacerdoteId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacerdoteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.SacerdoteRequest",
         "IsRequired": true
       }
     ],

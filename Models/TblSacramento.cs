@@ -24,7 +24,7 @@ namespace WebApi_SGI_T.Models;
 
         public string? ScMadrina { get; set; }
 
-        public string? ScParroco { get; set; }
+        public int? ScParrocoId { get; set; }
 
         public string? ScObservaciones { get; set; }
 
@@ -47,4 +47,5 @@ namespace WebApi_SGI_T.Models;
         public virtual TblMatrimonio ScIdMatrimonioNavigation { get; set; } = null!;
 
         public virtual ICollection<TblConstancias> ScConstancias { get; set; } = null!;
-    }
+        public virtual TblSacerdote Sacerdote { get; set; } = null!;
+}

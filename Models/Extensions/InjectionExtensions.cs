@@ -27,6 +27,9 @@ namespace WebApi_SGI_T.Models.Extensions
             services.AddScoped<RolService>();
             services.AddScoped<PermissionService>();
             services.AddScoped<UserRolService>();
+            services.AddScoped<CategoriaSacerdoteService>();
+            services.AddScoped<SacerdoteService>();
+            services.AddScoped<FirmaService>();
             services.AddScoped<DataInitial>();
 
             services.AddSingleton<ImageStorage>();

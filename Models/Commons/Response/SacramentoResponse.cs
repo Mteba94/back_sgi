@@ -19,7 +19,7 @@
         public string? ScNombrePadrino { get; set; }
         public string? ScNombreMadrina { get; set; }
         public DateTime ScFechaSacramento { get; set; }
-        public string? ScParroco { get; set; }
+        public int? ScParrocoId { get; set; }
         public string? ScObservaciones { get; set; }
         public DateTime ScCreateDate { get; set; }
     }
