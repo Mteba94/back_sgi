@@ -31,6 +31,7 @@ namespace WebApi_SGI_T.Imp
             try
             {
                 var query = _context.TblSacerdotes
+                    .Where(x => x.ScDeleteUser == null && x.ScDeleteDate == null)
                     .AsNoTracking();
 
                 if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))
@@ -129,8 +130,10 @@ namespace WebApi_SGI_T.Imp
                         SacerdoteId = s.ScId,
                         SacerdoteNombre = s.ScNombre,
                         SacerdoteIdCategoria = s.ScIdCategoria,
+                        SacerdoteCategoria = s.ScIdCategoriaNavigation.CsAbreviacion,
                         SacerdoteFirma = s.ScFirma,
-                        SacerdoteEstado = s.ScEstado
+                        SacerdoteEstado = s.ScEstado,
+                        SacerdoteEstadoDesc = (s.ScEstado == 1 ? "Activo" : "Inactivo")
                     }).FirstOrDefaultAsync();
 
                 response.Data = query;

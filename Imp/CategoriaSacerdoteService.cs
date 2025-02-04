@@ -11,7 +11,7 @@ namespace WebApi_SGI_T.Imp
     {
         readonly SgiSacramentosContext _context;
 
-        public CategoriaSacerdoteService(SgiSacramentosContext context = null)
+        public CategoriaSacerdoteService(SgiSacramentosContext context = null!)
         {
             _context = context;
         }
@@ -26,6 +26,7 @@ namespace WebApi_SGI_T.Imp
             try
             {
                 var query = _context.TblCategoriaSacerdotes
+                    .Where(x => x.CsEstado == 1)
                     .AsNoTracking();
 
                 if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))
@@ -108,16 +109,19 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
-                var tipoDocumento = await _context.TblCategoriaSacerdotes
+                var query = await _context.TblCategoriaSacerdotes
                         .AsNoTracking()
                         .FirstOrDefaultAsync(x => x.CsId == id);
 
-                if (tipoDocumento != null)
+                if (query != null)
                 {
                     var mappedData = new CategoriaSacerdoteResponse
                     {
-                        CsId = tipoDocumento.CsId,
-                        CsNombre = tipoDocumento.CsNombre
+                        CsId = query.CsId,
+                        CsNombre = query.CsNombre,
+                        CsAbreviacion = query.CsAbreviacion,
+                        CsEstado = query.CsEstado,
+                        CsEstadoDesc = (query.CsEstado == 1 ? "Activo" : "Inactivo"),
                     };
                     response.Data = mappedData;
                     response.Message = ReplyMessage.MESSAGE_QUERY;

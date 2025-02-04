@@ -9,6 +9,8 @@ using WebApi_SGI_T.Static;
 using Microsoft.Data.SqlClient;
 using Azure.Core;
 using System.Security.Claims;
+using System.Globalization;
+using System.Text;
 
 namespace WebApi_SGI_T.Imp
 {
@@ -40,7 +42,7 @@ namespace WebApi_SGI_T.Imp
                     switch (filters.NumFilter)
                     {
                         case 1:
-                            query = query.Where(x => x.ScIdpersonaNavigation.PeNombre.Contains(filters.TextFilter));
+                            query = query.Where(x => x.ScIdpersonaNavigation.PeNombre != null);
                             break;
                         case 2:
                             query = query.Where(x => x.ScIdpersonaNavigation.PeNumeroDocumento.Contains(filters.TextFilter));
@@ -78,6 +80,17 @@ namespace WebApi_SGI_T.Imp
                     ScCreateDate = s.ScCreateDate,
                     
                 }).ToList();
+
+                if (!string.IsNullOrEmpty(filters.TextFilter) && filters.NumFilter == 1)
+                {
+                    var normalizedFilterText = RemoveDiacritics(filters.TextFilter).ToLower();
+
+                    mappedData = mappedData.Where(item =>
+                        RemoveDiacritics(item.PeNombre).ToLower().Contains(normalizedFilterText)
+                    ).ToList();
+
+                    totalRecords = mappedData.Count();
+                }
 
                 if (filters.Sort is null) filters.Sort = "ScIdSacramento";
 
@@ -411,6 +424,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_nombre", request.PeNombre));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento", request.PeFechaNacimiento));
                 cmd.Parameters.Add(new SqlParameter("@i_tipoDoc", request.PeIdTipoDocumento));
+                cmd.Parameters.Add(new SqlParameter("@i_sexo", request.PeSexoId));
                 cmd.Parameters.Add(new SqlParameter("@i_observacion", request.ScObservaciones));
                 cmd.Parameters.Add(new SqlParameter("@i_direccion", request.PeDireccion));
                 cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
@@ -533,5 +547,27 @@ namespace WebApi_SGI_T.Imp
 
             return response;
         }
+
+        public static string RemoveDiacritics(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return text;
+
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder();
+
+            foreach (var ch in normalizedString)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(ch);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(ch);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
+        }
+
+
     }
 }

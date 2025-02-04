@@ -1,11 +1,1258 @@
 {
   "Version": 1,
-  "Hash": "ODM0vVzrA1PeR1RfqaXZMxxvVbpM4c+Zl6/JvSJzxqk=",
+  "Hash": "o5e9tI2Ya5eArFUEGgBPJTQQWFaMdyrr0KF8r/oJj+8=",
   "Source": "WebApi-SGI-T",
   "BasePath": "_content/WebApi-SGI-T",
   "Mode": "Default",
   "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApi-SGI-T\\wwwroot",
+      "Source": "WebApi-SGI-T",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "certificacion/Logo Parroquial-03#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0xkbw0pxac",
+      "Integrity": "XNHaUNfY/4CseGGMdK7N0E3tNRtTK2RV38DMB/ove0Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificacion\\Logo Parroquial-03.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "certificacion/logo-parroquia#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rew5yvu9ya",
+      "Integrity": "U5Gz/8MGQYlLCaAr8ZWixethLDsfqSj9RDKWuodCJs0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificacion\\logo-parroquia.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "certificacion/Montserrat#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "32toxddriz",
+      "Integrity": "5bGj+6xuW/nyCGD5olSr45JAQ59EVWjYzTdIJ4nl3Kw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat.ttf"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "certificacion/Montserrat-Bold#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0f68wwysiu",
+      "Integrity": "hG1YI+XJCaWq1J771x3V8zIKhkD/+GhAv31SnI2GYKU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat-Bold.ttf"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "certificacion/Montserrat-Regular#[.{fingerprint}]?.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x1juw6fwdo",
+      "Integrity": "9aPwLEpy8doRxtrfT9eMB7LxRaNO1G64de0Nooy9NIw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat-Regular.ttf"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xlvkyd499j",
+      "Integrity": "++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9jsqf6kpk",
+      "Integrity": "eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/690884ac-48ab-4120-a894-812acc2420f2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9jsqf6kpk",
+      "Integrity": "eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/93148438-86b3-45d1-88f3-d26b07716944#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9jsqf6kpk",
+      "Integrity": "eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k9jsqf6kpk",
+      "Integrity": "eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xlvkyd499j",
+      "Integrity": "++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png"
+    },
+    {
+      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "SourceId": "WebApi-SGI-T",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "BasePath": "_content/WebApi-SGI-T",
+      "RelativePath": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xlvkyd499j",
+      "Integrity": "++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "certificacion/Logo Parroquial-03.0xkbw0pxac.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XNHaUNfY/4CseGGMdK7N0E3tNRtTK2RV38DMB/ove0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 Aug 2024 04:57:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0xkbw0pxac"
+        },
+        {
+          "Name": "label",
+          "Value": "certificacion/Logo Parroquial-03.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XNHaUNfY/4CseGGMdK7N0E3tNRtTK2RV38DMB/ove0Y="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Logo Parroquial-03.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "599616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XNHaUNfY/4CseGGMdK7N0E3tNRtTK2RV38DMB/ove0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 20 Aug 2024 04:57:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XNHaUNfY/4CseGGMdK7N0E3tNRtTK2RV38DMB/ove0Y="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/logo-parroquia.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1070613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U5Gz/8MGQYlLCaAr8ZWixethLDsfqSj9RDKWuodCJs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 Aug 2024 03:45:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-U5Gz/8MGQYlLCaAr8ZWixethLDsfqSj9RDKWuodCJs0="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/logo-parroquia.rew5yvu9ya.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1070613"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"U5Gz/8MGQYlLCaAr8ZWixethLDsfqSj9RDKWuodCJs0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 Aug 2024 03:45:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rew5yvu9ya"
+        },
+        {
+          "Name": "label",
+          "Value": "certificacion/logo-parroquia.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-U5Gz/8MGQYlLCaAr8ZWixethLDsfqSj9RDKWuodCJs0="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat.32toxddriz.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "394140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5bGj+6xuW/nyCGD5olSr45JAQ59EVWjYzTdIJ4nl3Kw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 Aug 2024 13:39:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "32toxddriz"
+        },
+        {
+          "Name": "label",
+          "Value": "certificacion/Montserrat.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5bGj+6xuW/nyCGD5olSr45JAQ59EVWjYzTdIJ4nl3Kw="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "394140"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5bGj+6xuW/nyCGD5olSr45JAQ59EVWjYzTdIJ4nl3Kw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 26 Aug 2024 13:39:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5bGj+6xuW/nyCGD5olSr45JAQ59EVWjYzTdIJ4nl3Kw="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat-Bold.0f68wwysiu.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hG1YI+XJCaWq1J771x3V8zIKhkD/+GhAv31SnI2GYKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Nov 2024 22:01:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0f68wwysiu"
+        },
+        {
+          "Name": "label",
+          "Value": "certificacion/Montserrat-Bold.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hG1YI+XJCaWq1J771x3V8zIKhkD/+GhAv31SnI2GYKU="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat-Bold.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "335788"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hG1YI+XJCaWq1J771x3V8zIKhkD/+GhAv31SnI2GYKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Nov 2024 22:01:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hG1YI+XJCaWq1J771x3V8zIKhkD/+GhAv31SnI2GYKU="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat-Regular.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "330948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9aPwLEpy8doRxtrfT9eMB7LxRaNO1G64de0Nooy9NIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Nov 2024 21:59:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9aPwLEpy8doRxtrfT9eMB7LxRaNO1G64de0Nooy9NIw="
+        }
+      ]
+    },
+    {
+      "Route": "certificacion/Montserrat-Regular.x1juw6fwdo.ttf",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "330948"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-font-ttf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9aPwLEpy8doRxtrfT9eMB7LxRaNO1G64de0Nooy9NIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Nov 2024 21:59:00 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x1juw6fwdo"
+        },
+        {
+          "Name": "label",
+          "Value": "certificacion/Montserrat-Regular.ttf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9aPwLEpy8doRxtrfT9eMB7LxRaNO1G64de0Nooy9NIw="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:28:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054.xlvkyd499j.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:28:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xlvkyd499j"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3.k9jsqf6kpk.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:18:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9jsqf6kpk"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:18:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/690884ac-48ab-4120-a894-812acc2420f2.k9jsqf6kpk.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9jsqf6kpk"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/690884ac-48ab-4120-a894-812acc2420f2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/690884ac-48ab-4120-a894-812acc2420f2.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/93148438-86b3-45d1-88f3-d26b07716944.k9jsqf6kpk.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:20:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9jsqf6kpk"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/93148438-86b3-45d1-88f3-d26b07716944.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/93148438-86b3-45d1-88f3-d26b07716944.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:20:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.k9jsqf6kpk.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:22:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k9jsqf6kpk"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9696"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 04:22:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eFmB4wPVqD/H7PE6h13yM7dc7HB44Cq3L/dHLPN43YY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 19:45:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.xlvkyd499j.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Oct 2024 19:45:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xlvkyd499j"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Oct 2024 04:49:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    },
+    {
+      "Route": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3.xlvkyd499j.png",
+      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32910"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Oct 2024 04:49:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xlvkyd499j"
+        },
+        {
+          "Name": "label",
+          "Value": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-++wNSiU3trHXfmKNc9h4RZuT8y/kaAFNwW6iovGsmPY="
+        }
+      ]
+    }
+  ]
 }

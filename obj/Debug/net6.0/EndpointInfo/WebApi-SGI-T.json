@@ -1,0 +1,2190 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SGI API",
+    "description": "Sistema Gestion de Sacramentos 2024",
+    "termsOfService": "https://opensource.org/licenses/NIT",
+    "contact": {
+      "name": "Melvin Tebalan",
+      "url": "https://opensource.org/licenses/NIT",
+      "email": "tebalandonis@gmail.com"
+    },
+    "license": {
+      "name": "Use under LICX",
+      "url": "https://opensource.org/licenses/"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/CategoriaSacerdote/List": {
+      "post": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CategoriaSacerdote/Select": {
+      "get": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CategoriaSacerdote/Register": {
+      "post": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CategoriaSacerdote/{categoriaId}": {
+      "get": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "categoriaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CategoriaSacerdote/Update/{categoriaId}": {
+      "put": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "categoriaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaSacerdoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CategoriaSacerdote/Delete/{categoriaId}": {
+      "put": {
+        "tags": [
+          "CategoriaSacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "categoriaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Certification": {
+      "post": {
+        "tags": [
+          "Certification"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CertificationModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CertificationModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CertificationModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/CantidadSacramentos": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Firma/ListSelectFirma": {
+      "get": {
+        "tags": [
+          "Firma"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Firma/RegisterFirma/{sacerdoteId}": {
+      "post": {
+        "tags": [
+          "Firma"
+        ],
+        "parameters": [
+          {
+            "name": "sacerdoteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Firma/DeleteFirma": {
+      "put": {
+        "tags": [
+          "Firma"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistConstancia": {
+      "post": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistConstancia/Register": {
+      "post": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistConstancia/Correlativo/{sacramentoId}": {
+      "post": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rol/Select": {
+      "get": {
+        "tags": [
+          "Rol"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rol/Register": {
+      "post": {
+        "tags": [
+          "Rol"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rol/GetById": {
+      "get": {
+        "tags": [
+          "Rol"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rol/Update/{rolId}": {
+      "put": {
+        "tags": [
+          "Rol"
+        ],
+        "parameters": [
+          {
+            "name": "rolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RolRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Rol/Delete": {
+      "delete": {
+        "tags": [
+          "Rol"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/List": {
+      "post": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/Select": {
+      "get": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/{sacerdoteId}": {
+      "get": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "sacerdoteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/Register": {
+      "post": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/Update/{sacerdoteId}": {
+      "put": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "sacerdoteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacerdoteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacerdote/Delete/{sacerdoteId}": {
+      "put": {
+        "tags": [
+          "Sacerdote"
+        ],
+        "parameters": [
+          {
+            "name": "sacerdoteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento": {
+      "post": {
+        "tags": [
+          "Sacramento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/{sacramentoId}": {
+      "get": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Matrimonio/{sacramentoId}": {
+      "get": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Register": {
+      "post": {
+        "tags": [
+          "Sacramento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Register/Matrimonio": {
+      "post": {
+        "tags": [
+          "Sacramento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Update/{sacramentoId}": {
+      "put": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Update/Matrimonio/{sacramentoId}": {
+      "put": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoDocumento/Select": {
+      "get": {
+        "tags": [
+          "TipoDocumento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoDocumento/Register": {
+      "post": {
+        "tags": [
+          "TipoDocumento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoDocumento/{tipoDocumentoId}": {
+      "get": {
+        "tags": [
+          "TipoDocumento"
+        ],
+        "parameters": [
+          {
+            "name": "tipoDocumentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoDocumento/Update/{tipoDocumentoId}": {
+      "put": {
+        "tags": [
+          "TipoDocumento"
+        ],
+        "parameters": [
+          {
+            "name": "tipoDocumentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoDocumentoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoDocumento/Delete": {
+      "delete": {
+        "tags": [
+          "TipoDocumento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento": {
+      "post": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento/Select": {
+      "get": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento/{tipoSacramentoId}": {
+      "get": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "parameters": [
+          {
+            "name": "tipoSacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento/Register": {
+      "post": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento/Update/{tipoSacramentoId}": {
+      "put": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "parameters": [
+          {
+            "name": "tipoSacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSacramentoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSacramento/Remove/{tipoSacramentoId}": {
+      "put": {
+        "tags": [
+          "TipoSacramento"
+        ],
+        "parameters": [
+          {
+            "name": "tipoSacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSexo/Select": {
+      "get": {
+        "tags": [
+          "TipoSexo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSexo/{idTipoGenero}": {
+      "get": {
+        "tags": [
+          "TipoSexo"
+        ],
+        "parameters": [
+          {
+            "name": "idTipoGenero",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSexo/Register": {
+      "post": {
+        "tags": [
+          "TipoSexo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSexo/Update/{idTipoGenero}": {
+      "put": {
+        "tags": [
+          "TipoSexo"
+        ],
+        "parameters": [
+          {
+            "name": "idTipoGenero",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoSexoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TipoSexo/Delete": {
+      "delete": {
+        "tags": [
+          "TipoSexo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UserRol/Assign/{userId}/{roleId}": {
+      "post": {
+        "tags": [
+          "UserRol"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UserRol/GetById/{userId}": {
+      "get": {
+        "tags": [
+          "UserRol"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/UserRol/Delete": {
+      "delete": {
+        "tags": [
+          "UserRol"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/Register": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "UsUserName"
+                ],
+                "type": "object",
+                "properties": {
+                  "UsUserName": {
+                    "type": "string"
+                  },
+                  "UsPass": {
+                    "type": "string"
+                  },
+                  "UsImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "UsNombre": {
+                    "type": "string"
+                  },
+                  "UsFechaNacimiento": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UsIdTipoDocumento": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UsNumerodocumento": {
+                    "type": "string"
+                  },
+                  "UsIdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UsDireccion": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "UsUserName": {
+                  "style": "form"
+                },
+                "UsPass": {
+                  "style": "form"
+                },
+                "UsImage": {
+                  "style": "form"
+                },
+                "UsNombre": {
+                  "style": "form"
+                },
+                "UsFechaNacimiento": {
+                  "style": "form"
+                },
+                "UsIdTipoDocumento": {
+                  "style": "form"
+                },
+                "UsNumerodocumento": {
+                  "style": "form"
+                },
+                "UsIdGenero": {
+                  "style": "form"
+                },
+                "UsDireccion": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/Generate/Token": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/{userName}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/List": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/Update/{userId}": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "UsUserName"
+                ],
+                "type": "object",
+                "properties": {
+                  "UsUserName": {
+                    "type": "string"
+                  },
+                  "UsPass": {
+                    "type": "string"
+                  },
+                  "UsImage": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "UsNombre": {
+                    "type": "string"
+                  },
+                  "UsFechaNacimiento": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UsIdTipoDocumento": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UsNumerodocumento": {
+                    "type": "string"
+                  },
+                  "UsIdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UsDireccion": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "UsUserName": {
+                  "style": "form"
+                },
+                "UsPass": {
+                  "style": "form"
+                },
+                "UsImage": {
+                  "style": "form"
+                },
+                "UsNombre": {
+                  "style": "form"
+                },
+                "UsFechaNacimiento": {
+                  "style": "form"
+                },
+                "UsIdTipoDocumento": {
+                  "style": "form"
+                },
+                "UsNumerodocumento": {
+                  "style": "form"
+                },
+                "UsIdGenero": {
+                  "style": "form"
+                },
+                "UsDireccion": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/Delete": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Usuario/Reset/{userId}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BaseFiltersRequest": {
+        "type": "object",
+        "properties": {
+          "numPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numRecordsPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order": {
+            "type": "string",
+            "nullable": true
+          },
+          "sort": {
+            "type": "string",
+            "nullable": true
+          },
+          "records": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numFilter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "textFilter": {
+            "type": "string",
+            "nullable": true
+          },
+          "stateFilter": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "download": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CategoriaSacerdoteRequest": {
+        "type": "object",
+        "properties": {
+          "csNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "csAbreviacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CertificationModel": {
+        "type": "object",
+        "properties": {
+          "idTipoSacramento": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoSacramento": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "folio": {
+            "type": "string",
+            "nullable": true
+          },
+          "partida": {
+            "type": "string",
+            "nullable": true
+          },
+          "dia": {
+            "type": "string",
+            "nullable": true
+          },
+          "mes": {
+            "type": "string",
+            "nullable": true
+          },
+          "anio": {
+            "type": "string",
+            "nullable": true
+          },
+          "correlativo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreBautizado": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimientoEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombrePadre": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePadreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreMadre": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreMadreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePadrinos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "nombreSacerdote": {
+            "type": "string",
+            "nullable": true
+          },
+          "sacerdoteRealizaCat": {
+            "type": "string",
+            "nullable": true
+          },
+          "anotacionMarginal": {
+            "type": "string",
+            "nullable": true
+          },
+          "diaExpedicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "mesExpedicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "anioExpedicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "sacerdoteFirma": {
+            "type": "string",
+            "nullable": true
+          },
+          "sacerdoteCat": {
+            "type": "string",
+            "nullable": true
+          },
+          "tituloSacerdotal": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistConstanciaRequest": {
+        "type": "object",
+        "properties": {
+          "ct_SacramentoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ct_UsuarioId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ct_correlativo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MatrimonioRequest": {
+        "type": "object",
+        "properties": {
+          "scIdTipoSacramento": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "scNumeroPartida": {
+            "type": "string",
+            "nullable": true
+          },
+          "peNombreEsposo": {
+            "type": "string",
+            "nullable": true
+          },
+          "peNombreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "peFechaNacimientoEsposo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "peFechaNacimientoEsposa": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "peIdTipoDocumentoEsposo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peIdTipoDocumentoEsposa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peNumeroDocumentoEsposo": {
+            "type": "string",
+            "nullable": true
+          },
+          "peNumeroDocumentoEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "peSexoIdEsposo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peSexoIdEsposa": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peDireccionEsposo": {
+            "type": "string",
+            "nullable": true
+          },
+          "peDireccionEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "scPadreEsposo": {
+            "type": "string",
+            "nullable": true
+          },
+          "scPadreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "scMadreEsposo": {
+            "type": "string",
+            "nullable": true
+          },
+          "scMadreEsposa": {
+            "type": "string",
+            "nullable": true
+          },
+          "scTestigo1": {
+            "type": "string",
+            "nullable": true
+          },
+          "scTestigo2": {
+            "type": "string",
+            "nullable": true
+          },
+          "scParroco": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "scFechaSacramento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scObservaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolRequest": {
+        "type": "object",
+        "properties": {
+          "roNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "roDescripcion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SacerdoteRequest": {
+        "type": "object",
+        "properties": {
+          "sacerdoteNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "sacerdoteIdCategoria": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SacramentoRequestDto": {
+        "type": "object",
+        "properties": {
+          "scNumeroPartida": {
+            "type": "string",
+            "nullable": true
+          },
+          "scIdTipoSacramento": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "peNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "peFechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "peIdTipoDocumento": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peNumeroDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "peSexoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "peDireccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "scPadre": {
+            "type": "string",
+            "nullable": true
+          },
+          "scMadre": {
+            "type": "string",
+            "nullable": true
+          },
+          "scPadrino": {
+            "type": "string",
+            "nullable": true
+          },
+          "scMadrina": {
+            "type": "string",
+            "nullable": true
+          },
+          "scParroco": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "scFechaSacramento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "scObservaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoDocumentoRequest": {
+        "type": "object",
+        "properties": {
+          "tdNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "tdAbreviacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoSacramentoRequest": {
+        "type": "object",
+        "properties": {
+          "tsNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "tsDescripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tsRequerimiento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoSexoRequest": {
+        "type": "object",
+        "properties": {
+          "sexoNombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "sexoAbreviacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TokenRequestDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Bearer Token",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

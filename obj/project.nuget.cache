@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+hjDRKbPY0s=",
+  "dgSpecHash": "8yFHGn54+fM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\geova\\OneDrive\\Escritorio\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\WebApi-SGI-T.csproj",
+  "projectFilePath": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\WebApi-SGI-T.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\geova\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\geova\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -139,6 +139,16 @@
     "C:\\Users\\geova\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Linq.Dynamic.Core\" 1.4.3 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-4cv2-4hjh-77rx",
+      "libraryId": "System.Linq.Dynamic.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

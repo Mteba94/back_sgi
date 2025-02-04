@@ -82,9 +82,20 @@ namespace WebApi_SGI_T.Imp
                 byte[] pdfBytes = ms.ToArray();
                 var B64 = Convert.ToBase64String(pdfBytes);
 
+                string fileName = "";
+
+                if(model.idTipoSacramento == 4)
+                {
+                    fileName = $"{model.TipoSacramento} - {model.NombreBautizado} & {model.NombreEsposa}.pdf";
+                }
+                else
+                {
+                    fileName = $"{model.TipoSacramento} - {model.NombreBautizado}.pdf";
+                }
+
                 var mappedData = new ConstanciaResponse
                 {
-                    FileName = $"{model.TipoSacramento}.pdf",
+                    FileName = fileName,
                     B64 = B64
                 };
 
@@ -385,7 +396,7 @@ namespace WebApi_SGI_T.Imp
             sacerdote.WidthPercentage = 100;
             sacerdote.SetWidths(new float[] {35, 65 });
 
-            sacerdote.AddCell(new PdfPCell(new Phrase("Realizo el Bautismo el Pbro:", normal))
+            sacerdote.AddCell(new PdfPCell(new Phrase($"Realizo el bautizo el {model.SacerdoteRealizaCat}", normal))
             {
                 Border = Rectangle.NO_BORDER,
                 HorizontalAlignment = Element.ALIGN_RIGHT
@@ -445,13 +456,25 @@ namespace WebApi_SGI_T.Imp
 
             doc.Add(new Paragraph(" ") { SpacingAfter = 20 });
 
-            doc.Add(new Paragraph($"{model.SacerdoteCat}. {model.SacerdoteFirma}, FMM", subtitulo)
+            doc.Add(new Paragraph($"{model.SacerdoteCat} {model.SacerdoteFirma}, FMM", subtitulo)
             {
                 SpacingBefore = 100,
                 Alignment = Element.ALIGN_CENTER
             });
 
-            doc.Add(new Paragraph("Vicario Parroquial", normal)
+            String tituloSacerdotal = "";
+
+            if(model.tituloSacerdotal == "vicario")
+            {
+                tituloSacerdotal = "Vicario Parroquial";
+            }
+
+            if (model.tituloSacerdotal == "parroco")
+            {
+                tituloSacerdotal = "Párroco";
+            }
+
+            doc.Add(new Paragraph($"{tituloSacerdotal}", normal)
             {
                 Alignment = Element.ALIGN_CENTER
             });
@@ -656,13 +679,25 @@ namespace WebApi_SGI_T.Imp
 
             doc.Add(new Paragraph(" ") { SpacingAfter = 30 });
 
-            doc.Add(new Paragraph($"Pbro. {model.NombreSacerdote}, FMM", subtitulo)
+            doc.Add(new Paragraph($"{model.SacerdoteCat} {model.SacerdoteFirma}, FMM", subtitulo)
             {
                 SpacingBefore = 100,
                 Alignment = Element.ALIGN_CENTER
             });
 
-            doc.Add(new Paragraph("Vicario Parroquial", normal)
+            String tituloSacerdotal = "";
+
+            if (model.tituloSacerdotal == "vicario")
+            {
+                tituloSacerdotal = "Vicario Parroquial";
+            }
+
+            if (model.tituloSacerdotal == "parroco")
+            {
+                tituloSacerdotal = "Párroco";
+            }
+
+            doc.Add(new Paragraph($"{tituloSacerdotal}", normal)
             {
                 Alignment = Element.ALIGN_CENTER
             });
@@ -896,13 +931,25 @@ namespace WebApi_SGI_T.Imp
 
             doc.Add(new Paragraph(" ") { SpacingAfter = 30 });
 
-            doc.Add(new Paragraph($"Pbro. {model.NombreSacerdote}, FMM", subtitulo)
+            doc.Add(new Paragraph($"{model.SacerdoteCat} {model.SacerdoteFirma}, FMM", subtitulo)
             {
                 SpacingBefore = 100,
                 Alignment = Element.ALIGN_CENTER
             });
 
-            doc.Add(new Paragraph("Vicario Parroquial", normal)
+            String tituloSacerdotal = "";
+
+            if (model.tituloSacerdotal == "vicario")
+            {
+                tituloSacerdotal = "Vicario Parroquial";
+            }
+
+            if (model.tituloSacerdotal == "parroco")
+            {
+                tituloSacerdotal = "Párroco";
+            }
+
+            doc.Add(new Paragraph($"{tituloSacerdotal}", normal)
             {
                 Alignment = Element.ALIGN_CENTER
             });
@@ -1154,6 +1201,37 @@ namespace WebApi_SGI_T.Imp
             doc.Add(sacerdote);
             doc.Add(emptyTable);
 
+            PdfPTable anotacion = new PdfPTable(2);
+            anotacion.WidthPercentage = 100;
+            anotacion.SetWidths(new float[] { 35, 65 });
+
+            anotacion.AddCell(new PdfPCell(new Phrase("En la anotacion marginal se lee:", normal))
+            {
+                Border = Rectangle.NO_BORDER,
+                HorizontalAlignment = Element.ALIGN_RIGHT
+            });
+
+            anotacion.AddCell(new PdfPCell(new Phrase(" ", normal))
+            {
+                Border = Rectangle.NO_BORDER
+            });
+
+            doc.Add(anotacion);
+            doc.Add(emptyTable);
+
+            PdfPTable notacionMar = new PdfPTable(1);
+            notacionMar.WidthPercentage = 100;
+
+            notacionMar.AddCell(new PdfPCell(new Phrase(model.AnotacionMarginal, normal))
+            {
+                Border = Rectangle.NO_BORDER,
+                HorizontalAlignment = Element.ALIGN_CENTER
+            });
+
+            doc.Add(notacionMar);
+
+            doc.Add(new Paragraph(" ") { SpacingAfter = 3 });
+
             PdfPTable realizado = new PdfPTable(1);
             realizado.WidthPercentage = 100;
 
@@ -1165,15 +1243,27 @@ namespace WebApi_SGI_T.Imp
 
             doc.Add(realizado);
 
-            doc.Add(new Paragraph(" ") { SpacingAfter = 30 });
+            doc.Add(new Paragraph(" ") {  });
 
-            doc.Add(new Paragraph($"Pbro. {model.NombreSacerdote}, FMM", subtitulo)
+            doc.Add(new Paragraph($"{model.SacerdoteCat} {model.SacerdoteFirma}, FMM", subtitulo)
             {
-                SpacingBefore = 100,
+                SpacingBefore = 70,
                 Alignment = Element.ALIGN_CENTER
             });
 
-            doc.Add(new Paragraph("Vicario Parroquial", normal)
+            String tituloSacerdotal = "";
+
+            if (model.tituloSacerdotal == "vicario")
+            {
+                tituloSacerdotal = "Vicario Parroquial";
+            }
+
+            if (model.tituloSacerdotal == "parroco")
+            {
+                tituloSacerdotal = "Párroco";
+            }
+
+            doc.Add(new Paragraph($"{tituloSacerdotal}", normal)
             {
                 Alignment = Element.ALIGN_CENTER
             });

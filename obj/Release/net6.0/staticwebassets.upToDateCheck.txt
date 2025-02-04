@@ -1,0 +1,12 @@
+wwwroot\certificacion\Logo Parroquial-03.png
+wwwroot\certificacion\logo-parroquia.png
+wwwroot\certificacion\Montserrat.ttf
+wwwroot\certificacion\Montserrat-Bold.ttf
+wwwroot\certificacion\Montserrat-Regular.ttf
+wwwroot\user-images\107d65fc-16b7-47b0-b8e9-76316576f054.png
+wwwroot\user-images\27699923-c491-4b0e-87aa-33d4becb4ac3.png
+wwwroot\user-images\690884ac-48ab-4120-a894-812acc2420f2.png
+wwwroot\user-images\93148438-86b3-45d1-88f3-d26b07716944.png
+wwwroot\user-images\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png
+wwwroot\user-images\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png
+wwwroot\user-images\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2025-01-31T14:21:21.3813580Z||;True|2025-01-31T08:10:30.3401259-06:00||;True|2025-01-30T18:05:43.5477019-06:00||;True|2025-01-30T17:56:02.3778604-06:00||;True|2025-01-30T15:27:10.0548799-06:00||;True|2025-01-30T15:23:43.8202291-06:00||;True|2025-01-30T15:15:18.7842246-06:00||;True|2025-01-30T12:54:38.9438657-06:00||;True|2025-01-30T12:51:52.8413793-06:00||;True|2025-01-30T12:46:46.3637701-06:00||;True|2025-01-30T10:03:39.3428435-06:00||;True|2025-01-30T09:41:00.6444521-06:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

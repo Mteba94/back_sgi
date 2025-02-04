@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApi-SGI-T")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+425b48ed2f89ee48238d47dbcb7ecb478b93cb50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e92c3f32135a00e1f265b4a90902086f478af83f")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApi-SGI-T")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApi-SGI-T")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

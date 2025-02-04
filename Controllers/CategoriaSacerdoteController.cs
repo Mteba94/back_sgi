@@ -60,10 +60,10 @@ namespace WebApi_SGI_T.Controllers
         }
 
         [HasPermission(Permission.DeleteCategoriaSacerdote)]
-        [HttpDelete("Delete")]
-        public async Task<IActionResult> DeleteCategoriaSacerdote(int id)
+        [HttpPut("Delete/{categoriaId:int}")]
+        public async Task<IActionResult> DeleteCategoriaSacerdote(int categoriaId)
         {
-            var response = await _service.DeleteCategoriaSacerdote(id);
+            var response = await _service.DeleteCategoriaSacerdote(categoriaId);
             return Ok(response);
         }
     }

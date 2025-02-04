@@ -14,7 +14,7 @@
         public string? ScMadre { get; set; }
         public string? ScPadrino { get; set; }
         public string? ScMadrina { get; set; }
-        public string? ScParroco { get; set; }
+        public int ScParroco { get; set; }
         public DateTime ScFechaSacramento { get; set; }
         public string? ScObservaciones { get; set; }
     }

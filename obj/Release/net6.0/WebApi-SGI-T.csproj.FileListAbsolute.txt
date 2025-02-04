@@ -116,3 +116,247 @@ C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bi
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Newtonsoft.Json.dll
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BouncyCastle.Crypto.dll
 C:\Users\geova\OneDrive\Escritorio\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.staticwebassets.runtime.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\appsettings.Development.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\appsettings.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.staticwebassets.runtime.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.staticwebassets.endpoints.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.exe
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.deps.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.runtimeconfig.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.pdb
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\AutoMapper.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Azure.Core.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Azure.Identity.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BCrypt.Net-Next.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BouncyCastle.Cryptography.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Humanizer.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.barcodes.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.forms.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.io.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.kernel.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.layout.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.pdfa.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.sign.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.styledxmlparser.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.svg.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.commons.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itextsharp.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Options.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Identity.Client.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.OpenApi.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.SqlServer.Server.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Mono.TextTemplating.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Charting.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Quality.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Snippets.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.System.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.WPFonts.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BouncyCastle.Crypto.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.CodeDom.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Drawing.Common.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Linq.Dynamic.Core.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Memory.Data.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Runtime.Caching.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Security.Permissions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Text.Encodings.Web.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Text.Json.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\de\PdfSharp.Charting.resources.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\de\PdfSharp.resources.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.csproj.AssemblyReference.cache
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.GeneratedMSBuildEditorConfig.editorconfig
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.AssemblyInfoInputs.cache
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.AssemblyInfo.cs
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.csproj.CoreCompileInputs.cache
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.MvcApplicationPartsAssemblyInfo.cs
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.MvcApplicationPartsAssemblyInfo.cache
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.sourcelink.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\scopedcss\bundle\WebApi-SGI-T.styles.css
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.build.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.development.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.build.endpoints.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.WebApi-SGI-T.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.WebApi-SGI-T.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.build.WebApi-SGI-T.props
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi-SGI-T.props
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.WebApi-SGI-T.props
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.pack.json
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.upToDateCheck.txt
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-S.50FAE5B2.Up2Date
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\refint\WebApi-SGI-T.dll
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.pdb
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.genruntimeconfig.cache
+D:\Geova\Cursos Udemy\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\ref\WebApi-SGI-T.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\appsettings.Development.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\appsettings.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.staticwebassets.endpoints.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.staticwebassets.runtime.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.exe
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.deps.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.runtimeconfig.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\WebApi-SGI-T.pdb
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\AutoMapper.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Azure.Core.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Azure.Identity.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BCrypt.Net-Next.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Humanizer.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.barcodes.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.forms.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.io.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.kernel.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.layout.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.pdfa.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.sign.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.styledxmlparser.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.svg.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itext.commons.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\itextsharp.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Identity.Client.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.OpenApi.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Mono.TextTemplating.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Charting.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Quality.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.Snippets.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.System.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.WPFonts.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\PdfSharp.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\BouncyCastle.Crypto.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.CodeDom.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Drawing.Common.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Memory.Data.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Runtime.Caching.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Security.Permissions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Text.Encodings.Web.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Text.Json.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\System.Windows.Extensions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\de\PdfSharp.Charting.resources.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\de\PdfSharp.resources.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.csproj.AssemblyReference.cache
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.AssemblyInfoInputs.cache
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.AssemblyInfo.cs
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.csproj.CoreCompileInputs.cache
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.sourcelink.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\scopedcss\bundle\WebApi-SGI-T.styles.css
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.build.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.development.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.build.endpoints.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.WebApi-SGI-T.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.WebApi-SGI-T.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.build.WebApi-SGI-T.props
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi-SGI-T.props
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.WebApi-SGI-T.props
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.pack.json
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-S.50FAE5B2.Up2Date
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\refint\WebApi-SGI-T.dll
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.pdb
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\WebApi-SGI-T.genruntimeconfig.cache
+C:\Users\geova\Desktop\Codes\Informacion Tesis\SISTEMA\API\WebApi-SGI-T\obj\Release\net6.0\ref\WebApi-SGI-T.dll

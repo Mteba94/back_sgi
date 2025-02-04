@@ -74,11 +74,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; img-src 'self' data:; media-src mediastream:; script-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self';");
-    await next();
-});
+//app.Use(async (context, next) =>
+//{
+//    context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; img-src 'self' data:; media-src mediastream:; script-src 'self'; style-src 'self'; frame-ancestors 'none'; form-action 'self'; ");
+//    await next();
+//});
+
 
 app.UseAuthentication();
 
