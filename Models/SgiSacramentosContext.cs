@@ -37,6 +37,7 @@ public partial class SgiSacramentosContext : DbContext
     public virtual DbSet<TblConstancias> TblConstancias { get; set; }
     public virtual DbSet<TblSacerdote> TblSacerdotes { get; set; }
     public virtual DbSet<TblCategoriaSacerdote> TblCategoriaSacerdotes { get; set; }
+    public virtual DbSet<TblSolicitudesAnulacion> TblSolicitudesAnulaciones { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -180,6 +181,11 @@ public partial class SgiSacramentosContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("sc_update_date");
             entity.Property(e => e.ScUpdateUser).HasColumnName("sc_update_user");
+
+            entity.Property(e => e.ScLugarBautizo)
+                .HasMaxLength(150)
+                .IsUnicode(false)
+                .HasColumnName("sc_lugarBautizo");
 
             entity.HasOne(d => d.ScIdSacramentoNavigation).WithOne(p => p.TblSacramento)
                 .HasForeignKey<TblSacramento>(d => d.ScIdTipoSacramento)
@@ -432,6 +438,21 @@ public partial class SgiSacramentosContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("ct_Fecha");
 
+            entity.Property(e => e.ct_Estado)
+                .HasColumnName("ct_Estado");
+
+            entity.Property(e => e.ct_Observaciones)
+                .HasMaxLength(250)
+                .IsUnicode(false)
+                .HasColumnName("ct_Observaciones");
+
+            entity.Property(e => e.ct_UsuarioRechazo)
+                .HasColumnName("ct_UsuarioRechazo");
+
+            entity.Property(e => e.ct_FechaRechazo)
+                .HasColumnType("datetime")
+                .HasColumnName("ct_FechaRechazo");
+
             entity.HasOne(d => d.ConstanciaNavigation)
                 .WithMany(p => p.ScConstancias)
                 .HasForeignKey(d => d.ct_SacramentoId)
@@ -443,6 +464,10 @@ public partial class SgiSacramentosContext : DbContext
                 .HasForeignKey(d => d.ct_UsuarioId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_tbl_const_ct_Us_3A81BR328");
+
+            entity.HasOne(d => d.UsuarioRechazoNavigation)
+                .WithMany()
+                .HasForeignKey(d => d.ct_UsuarioRechazo);
 
         });
 
@@ -533,6 +558,65 @@ public partial class SgiSacramentosContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_TblSacerdote_TblCategoriaSacerdote");
 
+        });
+
+        modelBuilder.Entity<TblSolicitudesAnulacion>(entity =>
+        {
+            entity.HasKey(e => e.saIdSolicitudAnulacion);
+
+            entity.ToTable("tbl_solicitudes_anulacion");
+
+            entity.Property(e => e.saIdSolicitudAnulacion)
+                .ValueGeneratedNever()
+                .HasColumnName("sa_idSolicitudAnulacion");
+
+            entity.Property(e => e.saIdConstancia)
+                .HasColumnName("sa_idConstancia");
+
+            entity.Property(e => e.saIdUsuarioSolicitante)
+               .HasColumnName("sa_idUsuarioSolicitante");
+
+            entity.Property(e => e.saFechaSolicitud)
+                .HasColumnType("datetime")
+                .HasColumnName("sa_fechaSolicitud");
+
+            entity.Property(e => e.saEstado)
+                .HasColumnName("sa_estado");
+
+            entity.Property(e => e.saIdUsuarioAprobador)
+                .HasColumnName("sa_idUsuarioAprobador");
+
+            entity.Property(e => e.saFechaAprobacion)
+                .HasColumnType("datetime")
+                .HasColumnName("sa_fechaAprobacion");
+
+            entity.Property(e => e.saMotivoSolicitud)
+                .HasMaxLength(250)
+                .IsUnicode(false)
+                .HasColumnName("sa_motivoSolicitud");
+
+            entity.Property(e => e.saMotivoRechazo)
+                .HasMaxLength(250)
+                .IsUnicode(false)
+                .HasColumnName("sa_motivoRechazo");
+
+            entity.HasOne(d => d.saIdConstanciaNavigation)
+                .WithMany(p => p.SolicitudesAnulacion)
+                .HasForeignKey(d => d.saIdConstancia)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tbl_solicitudes_anulacion_ct_idConstancia");
+
+            entity.HasOne(d => d.saIdUsuarioSolicitanteNavigation)
+                .WithMany(p => p.UsSolicitudAnulacion)
+                .HasForeignKey(d => d.saIdUsuarioSolicitante)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tbl_solicitudes_anulacion_sa_idUsuarioSolicitante");
+
+            entity.HasOne(d => d.saIdUsuarioAprobadorNavigation)
+                .WithMany(p => p.UsApruebaAnulacion)
+                .HasForeignKey(d => d.saIdUsuarioAprobador)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tbl_solicitudes_anulacion_sa_idUsuarioAprobador");
         });
 
         OnModelCreatingPartial(modelBuilder);

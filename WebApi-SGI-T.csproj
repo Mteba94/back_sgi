@@ -27,6 +27,7 @@
     <PackageReference Include="PDFsharp" Version="6.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.4.3" />
+    <PackageReference Include="WatchDog.NET" Version="1.4.12" />
   </ItemGroup>
 
   <ItemGroup>

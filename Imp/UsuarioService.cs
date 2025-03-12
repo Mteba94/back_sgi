@@ -73,7 +73,7 @@ namespace WebApi_SGI_T.Imp
                 // Crear la consulta base
                 var query = _context.TblUsuarios
                                     .Include(x => x.TblUserRols)
-                                    .ThenInclude(ur => ur.UrIdRolNavigation) // Incluye la navegación del rol
+                                    .ThenInclude(ur => ur.UrIdRolNavigation)
                                     .AsNoTracking()
                                     .Where(x => x.UsEstado == 1);
 
@@ -124,8 +124,8 @@ namespace WebApi_SGI_T.Imp
                     UsEstado = x.UsEstado,
                     EstadoDescripcion = x.UsEstado == 1 ? "Activo" : "Inactivo",
                     // Obtener el nombre del rol
-                    UserIdRole = x.TblUserRols.FirstOrDefault() != null ? x.TblUserRols.FirstOrDefault()!.UrIdRolNavigation.RoIdRol : 0!,
-                    UserRole = x.TblUserRols.FirstOrDefault() != null ? x.TblUserRols.FirstOrDefault()!.UrIdRolNavigation.RoNombre : null!
+                    UserIdRole = x.TblUserRols.FirstOrDefault(ur => ur.UrEstado == 1) != null ? x.TblUserRols.FirstOrDefault(ur => ur.UrEstado == 1)!.UrIdRolNavigation.RoIdRol : 0!,
+                    UserRole = x.TblUserRols.FirstOrDefault(ur => ur.UrEstado == 1) != null ? x.TblUserRols.FirstOrDefault(ur => ur.UrEstado == 1)!.UrIdRolNavigation.RoNombre : null!
                 }).ToListAsync();
 
                 // Aplicar ordenamiento
@@ -303,7 +303,7 @@ namespace WebApi_SGI_T.Imp
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var roles = await _context.TblUserRols
-                    .Where(ur => ur.UrIdUsuario == user.UsIdUsuario)
+                    .Where(ur => ur.UrIdUsuario == user.UsIdUsuario && ur.UrEstado == 1)
                     .Select(ur => ur.UrIdRolNavigation.RoNombre)
                     .ToListAsync();
 
@@ -370,9 +370,16 @@ namespace WebApi_SGI_T.Imp
                         usuario.UsPass = BC.HashPassword(request.UsPass);
                     }
 
+                    string imageUrl = null!;
+                    if (request.UsImage != null)
+                    {
+                        var container = "user-images";
+                        imageUrl = await _imageService.SaveImage(request.UsImage, container);
+                    }
+
                     // Actualizar otros campos
                     usuario.UsUserName = request.UsUserName;
-                    usuario.UsImage = request.UsImage?.FileName;
+                    usuario.UsImage = imageUrl;
                     usuario.UsNombre = request.UsNombre;
                     usuario.UsFechaNacimiento = request.UsFechaNacimiento;
                     usuario.UsIdTipoDocumento = request.UsIdTipoDocumento;

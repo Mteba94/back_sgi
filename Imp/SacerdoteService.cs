@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using WebApi_SGI_T.Models;
 using WebApi_SGI_T.Models.Commons.Helpers;
@@ -39,7 +41,7 @@ namespace WebApi_SGI_T.Imp
                     switch (filters.NumFilter)
                     {
                         case 1:
-                            query = query.Where(x => x.ScNombre!.Contains(filters.TextFilter));
+                            query = query.Where(x => x.ScNombre! != null);
                             break;
                     }
                 }
@@ -66,6 +68,17 @@ namespace WebApi_SGI_T.Imp
                     SacerdoteEstado = s.ScEstado,
                     SacerdoteEstadoDesc = (s.ScEstado == 1 ? "Activo" : "Inactivo"),
                 }).ToList();
+
+                if (!string.IsNullOrEmpty(filters.TextFilter) && filters.NumFilter == 1)
+                {
+                    var normalizedFilterText = RemoveDiacritics(filters.TextFilter).ToLower();
+
+                    mappedData = mappedData.Where(item =>
+                        RemoveDiacritics(item.SacerdoteNombre).ToLower().Contains(normalizedFilterText)
+                    ).ToList();
+
+                    totalRecords = mappedData.Count();
+                }
 
                 if (filters.Sort is null) filters.Sort = "SacerdoteId";
 
@@ -271,6 +284,26 @@ namespace WebApi_SGI_T.Imp
             }
 
             return response;
+        }
+
+        public static string RemoveDiacritics(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return text;
+
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder();
+
+            foreach (var ch in normalizedString)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(ch);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(ch);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
         }
     }
 

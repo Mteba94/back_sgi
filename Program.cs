@@ -63,6 +63,8 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 app.UseCors(Cors);
 
 
@@ -72,7 +74,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseWatchDogExceptionLogger();
+
+//app.UseHttpsRedirection();
 
 //app.Use(async (context, next) =>
 //{
@@ -93,6 +97,12 @@ using (var scope = app.Services.CreateScope())
 
     app.MapControllers();
 }
+
+//app.UseWatchDog(configuration =>
+//{
+//    configuration.WatchPageUsername = "admin";
+//    configuration.WatchPagePassword = "admin";
+//});
 
 app.Run();
 

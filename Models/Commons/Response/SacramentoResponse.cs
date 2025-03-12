@@ -8,6 +8,7 @@
         public string? ScTipoSacramento { get; set; }
         public int? scMatrimonioId { get; set; }
         public string? PeNombre { get; set; }
+        public int? PeEdad { get; set; }
         public DateTime PeFechaNacimiento { get; set; }
         public int PeIdTipoDocumento { get; set; }
         public string? PeTipoDocumento { get; set; }
@@ -22,5 +23,6 @@
         public int? ScParrocoId { get; set; }
         public string? ScObservaciones { get; set; }
         public DateTime ScCreateDate { get; set; }
+        public string? ScLugarBautizo { get; set; }
     }
 }

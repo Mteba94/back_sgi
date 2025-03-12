@@ -5,5 +5,6 @@
         public int ct_SacramentoId { get; set; }
         public int ct_UsuarioId { get; set; }
         public string? ct_correlativo { get; set; }
+        public string? ct_observaciones { get; set; }
     }
 }

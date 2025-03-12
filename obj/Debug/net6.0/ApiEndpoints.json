@@ -186,6 +186,59 @@
   },
   {
     "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "GetConstanciaById",
+    "RelativePath": "api/HistConstancia/{constanciaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "constanciaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "AnularConstancia",
+    "RelativePath": "api/HistConstancia/Anular/{constanciaId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "constanciaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.HistConstanciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
+    "Method": "ListConstanciasAnulacion",
+    "RelativePath": "api/HistConstancia/ConsultaConstancias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.BaseFiltersRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.HistConstanciaController",
     "Method": "GenararCorrelativo",
     "RelativePath": "api/HistConstancia/Correlativo/{sacramentoId}",
     "HttpMethod": "POST",
@@ -424,7 +477,49 @@
   },
   {
     "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
-    "Method": "getMatrimonioById",
+    "Method": "DeleteSacramento",
+    "RelativePath": "api/Sacramento/Delete/{sacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.SacramentoRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "DeleteMatrimonio",
+    "RelativePath": "api/Sacramento/Delete/Matrimonio/{sacramentoId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sacramentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "WebApi_SGI_T.Models.Commons.Request.MatrimonioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi_SGI_T.Controllers.SacramentoController",
+    "Method": "getMatrimonioById2",
     "RelativePath": "api/Sacramento/Matrimonio/{sacramentoId}",
     "HttpMethod": "GET",
     "IsController": true,

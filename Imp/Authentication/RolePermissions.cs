@@ -29,6 +29,7 @@ namespace WebApi_SGI_T.Imp.Authentication
             //UsuarioController
             Permission.GenerateToken,
             Permission.GetUsuarioByUserName,
+            Permission.UpdateUsuario,
 
             //CertificationController
             Permission.GeneratePdf,
@@ -40,10 +41,20 @@ namespace WebApi_SGI_T.Imp.Authentication
             Permission.GetHistoricoConstancias,
             Permission.HistConstanciaRegister,
             Permission.GenararCorrelativo,
+            Permission.ListConstanciasAnulacion,
 
             //TipoSexoController
             Permission.ListTipoSexoSelect,
             Permission.GetTipoSexoById,
+
+            //SacerdoteController
+            Permission.ListSacerdote,
+            Permission.GetSacerdoteById,
+
+            //FirmaController
+            Permission.ListSelectFirma,
+            Permission.RegisterFirma,
+            Permission.DeleteFirma
 
         };
     }

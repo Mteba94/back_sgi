@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using System.Security.Claims;
+using System.Text;
 using WebApi_SGI_T.Models;
 using WebApi_SGI_T.Models.Commons.Helpers;
 using WebApi_SGI_T.Models.Commons.Request;
@@ -36,6 +38,7 @@ namespace WebApi_SGI_T.Imp
                         .ThenInclude(cn => cn.ScIdSacramentoNavigation)
                         .Include(c => c.ConstanciaNavigation.ScIdpersonaNavigation)
                         .Include(c => c.UsuarioNavigation)
+                        .Include(c => c.UsuarioRechazoNavigation)
                         .AsNoTracking();
 
                 if(constancias != null)
@@ -45,7 +48,7 @@ namespace WebApi_SGI_T.Imp
                         switch (filters.NumFilter)
                         {
                             case 1:
-                                constancias = constancias.Where(x => x.ConstanciaNavigation.ScIdpersonaNavigation.PeNombre.Contains(filters.TextFilter));
+                                constancias = constancias.Where(x => x.ConstanciaNavigation.ScIdpersonaNavigation.PeNombre != null);
                                 break;
                             case 2:
                                 constancias = constancias.Where(x => x.ConstanciaNavigation.ScIdpersonaNavigation.PeNumeroDocumento.Contains(filters.TextFilter));
@@ -83,8 +86,25 @@ namespace WebApi_SGI_T.Imp
                         ct_FechaImpresion = constancia.ct_FechaImpresion,
                         ct_PeNombre = constancia.ConstanciaNavigation.ScIdpersonaNavigation.PeNombre,
                         ct_Sacramento = constancia.ConstanciaNavigation.ScIdSacramentoNavigation.TsNombre,
-                        ct_Usuario = constancia.UsuarioNavigation.UsNombre
+                        ct_Usuario = constancia.UsuarioNavigation.UsNombre,
+                        ct_Estado = constancia.ct_Estado,
+                        ct_EstadoDescripcion = (constancia.ct_Estado == 1 ? "Entregada" : "Anulada"),
+                        ct_Observacion = constancia.ct_Observaciones,
+                        ct_UsuarioRechazo = constancia.ct_UsuarioRechazo,
+                        ct_UsuarioRechazoNombre = constancia.UsuarioRechazoNavigation != null ? constancia.UsuarioRechazoNavigation.UsNombre : null,
+                        ct_FechaRechazo = constancia.ct_FechaRechazo
                     }).ToList();
+
+                    if (!string.IsNullOrEmpty(filters.TextFilter) && filters.NumFilter == 1)
+                    {
+                        var normalizedFilterText = RemoveDiacritics(filters.TextFilter).ToLower();
+
+                        mappedData = mappedData.Where(item =>
+                            RemoveDiacritics(item.ct_PeNombre).ToLower().Contains(normalizedFilterText)
+                        ).ToList();
+
+                        totalRecords = mappedData.Count();
+                    }
 
                     var orderedList = OrderingHelper.Ordering(filters, mappedData.AsQueryable(), !(bool)filters.Download!);
 
@@ -137,7 +157,8 @@ namespace WebApi_SGI_T.Imp
                     ct_Correlativo = nuevoCorrelativo,
                     ct_FormatoCorrelativo = request.ct_correlativo,
                     ct_UsuarioId = currentUserId,
-                    ct_FechaImpresion = DateTime.Now
+                    ct_FechaImpresion = DateTime.Now,
+                    ct_Estado = 1
                 };
 
                 _context.TblConstancias.Add(constancia);
@@ -203,6 +224,26 @@ namespace WebApi_SGI_T.Imp
             }
 
             return response;
+        }
+
+        public static string RemoveDiacritics(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return text;
+
+            var normalizedString = text.Normalize(NormalizationForm.FormD);
+            var stringBuilder = new StringBuilder();
+
+            foreach (var ch in normalizedString)
+            {
+                var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(ch);
+                if (unicodeCategory != UnicodeCategory.NonSpacingMark)
+                {
+                    stringBuilder.Append(ch);
+                }
+            }
+
+            return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
         }
     }
 }

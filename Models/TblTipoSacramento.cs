@@ -29,3 +29,4 @@ public partial class TblTipoSacramento
 
     public virtual TblSacramento? TblSacramento { get; set; }
 }
+

@@ -2,7 +2,11 @@
 using System.Runtime.CompilerServices;
 using WebApi_SGI_T.Imp;
 using WebApi_SGI_T.Imp.Authentication;
+using WebApi_SGI_T.Imp.Constancias;
 using WebApi_SGI_T.Imp.FileStorage;
+using WebApi_SGI_T.Imp.Matrimonio;
+using WebApi_SGI_T.Imp.Sacramentos;
+using WebApi_SGI_T.Models.Extensions.WatchDog;
 
 namespace WebApi_SGI_T.Models.Extensions
 {
@@ -31,9 +35,16 @@ namespace WebApi_SGI_T.Models.Extensions
             services.AddScoped<SacerdoteService>();
             services.AddScoped<FirmaService>();
             services.AddScoped<DataInitial>();
+            services.AddScoped<matrimonioDeleteService>();
+            services.AddScoped<MatrimonioById>();
+            services.AddScoped<EliminarSacramentoService>();
+            services.AddScoped<ConstanciaByIdService>();
+            services.AddScoped<AnularConstanciaService>();
+            services.AddScoped<ConsultaAnulacionService>();
 
             services.AddSingleton<ImageStorage>();
             services.AddTransient<ImageService>();
+            //services.AddWatchDog();
 
             return services;
         }

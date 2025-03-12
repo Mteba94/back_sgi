@@ -11,6 +11,7 @@ using Azure.Core;
 using System.Security.Claims;
 using System.Globalization;
 using System.Text;
+using WebApi_SGI_T.Imp.Matrimonio;
 
 namespace WebApi_SGI_T.Imp
 {
@@ -18,10 +19,12 @@ namespace WebApi_SGI_T.Imp
     {
         private readonly SgiSacramentosContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public SacramentoService(SgiSacramentosContext context, IHttpContextAccessor httpContextAccessor)
+        private readonly MatrimonioById _matrimonioById;
+        public SacramentoService(SgiSacramentosContext context, IHttpContextAccessor httpContextAccessor, MatrimonioById matrimonioById)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
+            _matrimonioById = matrimonioById;
         }
 
         public async Task<BaseResponse<BaseEntityResponse<SacramentoResponse>>> ListSacramentos(BaseFiltersRequest filters)
@@ -64,7 +67,7 @@ namespace WebApi_SGI_T.Imp
                 if (!string.IsNullOrEmpty(filters.StartDate) && !string.IsNullOrEmpty(filters.EndDate))
                 {
                     query = query.Where(x => x.ScFechaSacramento >= Convert.ToDateTime(filters.StartDate)
-                                             && x.ScFechaSacramento <= Convert.ToDateTime(filters.EndDate).AddDays(1));
+                                             && x.ScFechaSacramento <= Convert.ToDateTime(filters.EndDate));
                 }
 
                 var totalRecords = await query.CountAsync();
@@ -78,7 +81,7 @@ namespace WebApi_SGI_T.Imp
                     ScFechaSacramento = s.ScFechaSacramento,
                     ScObservaciones = s.ScObservaciones,
                     ScCreateDate = s.ScCreateDate,
-                    
+                    ScLugarBautizo = s.ScLugarBautizo
                 }).ToList();
 
                 if (!string.IsNullOrEmpty(filters.TextFilter) && filters.NumFilter == 1)
@@ -138,6 +141,7 @@ namespace WebApi_SGI_T.Imp
                         ScTipoSacramento = query.ScIdSacramentoNavigation.TsNombre,
                         scMatrimonioId = query.ScIdMatrimonio,
                         PeNombre = query.ScIdpersonaNavigation.PeNombre,
+                        PeEdad = query.ScIdpersonaNavigation.PeEdad ?? 0,
                         PeFechaNacimiento = query.ScIdpersonaNavigation.PeFechaNacimiento,
                         PeNumeroDocumento = query.ScIdpersonaNavigation.PeNumeroDocumento,
                         PeIdTipoDocumento = query.ScIdpersonaNavigation.PeIdTipoDocumento,
@@ -151,7 +155,8 @@ namespace WebApi_SGI_T.Imp
                         ScFechaSacramento = query.ScFechaSacramento,
                         ScParrocoId = query.ScParrocoId,
                         ScObservaciones = query.ScObservaciones,
-                        ScCreateDate = query.ScCreateDate
+                        ScCreateDate = query.ScCreateDate,
+                        ScLugarBautizo = query.ScLugarBautizo
                     };
 
                     response.IsSuccess = true;
@@ -165,83 +170,6 @@ namespace WebApi_SGI_T.Imp
                 }
             }
             catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.Message = ex.Message;
-            }
-
-            return response;
-        }
-
-        public async Task<BaseResponse<MatrimonioResponse>> GetMatrimonioById(int id)
-        {
-            var response = new BaseResponse<MatrimonioResponse>();
-
-            try
-            {
-                var matrimonio = await GetSacramentoById(id);
-
-                if (matrimonio.IsSuccess)
-                {
-                    var query = await _context.TblMatrimonios
-                    .Include(x => x.EsposoNavigation)
-                    .Include(x => x.EsposaNavigation)
-                    .Include(x => x.EsposoNavigation.PeIdTipoDocumentoNavigation)
-                    .Include(x => x.EsposaNavigation.PeIdTipoDocumentoNavigation)
-                    .Include(x => x.TblSacramentos)
-                    .AsNoTracking()
-                    .FirstOrDefaultAsync(x => x.MatrimonioId == matrimonio.Data.scMatrimonioId);
-
-                    if (query != null)
-                    {
-                        var sacramentos = await _context.TblSacramentos
-                            .Where(s => s.ScIdpersona == query.EsposoId || s.ScIdpersona == query.EsposaId)
-                            .ToListAsync();
-
-                        var mappedData = new MatrimonioResponse
-                        {
-                            ma_IdMatrimonio = query.MatrimonioId,
-                            ma_esposo = query.EsposoId,
-                            ma_esposa = query.EsposaId,
-                            scIdSacramentoEsposo = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScIdSacramento,
-                            scIdSacramentoEsposa = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScIdSacramento,
-                            MatrimonioEstado = query.MatrimonioEstado,
-                            ScIdTipoSacramento = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScIdTipoSacramento,
-                            ScNumeroPartida = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScNumeroPartida,
-                            PeNombreEsposo = query.EsposoNavigation.PeNombre,
-                            PeNombreEsposa = query.EsposaNavigation.PeNombre,
-                            PeFechaNacimientoEsposo = query.EsposoNavigation.PeFechaNacimiento,
-                            PeFechaNacimientoEsposa = query.EsposaNavigation.PeFechaNacimiento,
-                            PeIdTipoDocumentoEsposo = query.EsposoNavigation.PeIdTipoDocumento,
-                            PeIdTipoDocumentoEsposa = query.EsposaNavigation.PeIdTipoDocumento,
-                            PeNumeroDocumentoEsposo = query.EsposoNavigation.PeNumeroDocumento,
-                            PeNumeroDocumentoEsposa = query.EsposaNavigation.PeNumeroDocumento,
-                            PeSexoIdEsposo = query.EsposoNavigation.PeSexoId ?? 0,
-                            PeSexoIdEsposa = query.EsposaNavigation.PeSexoId ?? 0,
-                            PeDireccionEsposo = query.EsposoNavigation.PeDireccion,
-                            PeDireccionEsposa = query.EsposaNavigation.PeDireccion,
-                            ScPadreEsposo = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScPadre,
-                            ScPadreEsposa = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScPadre,
-                            ScMadreEsposo = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScMadre,
-                            ScMadreEsposa = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScMadre,
-                            ScTestigo1 = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScPadrino,
-                            ScTestigo2 = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposaId)?.ScMadrina,
-                            ScParrocoId = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScParrocoId,
-                            ScFechaSacramento = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScFechaSacramento,
-                            ScObservaciones = sacramentos.FirstOrDefault(s => s.ScIdpersona == query.EsposoId)?.ScObservaciones
-                        };
-
-                        response.IsSuccess = true;
-                        response.Data = mappedData;
-                        response.Message = ReplyMessage.MESSAGE_QUERY;
-                    }
-                    else
-                    {
-                        response.IsSuccess = false;
-                        response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
-                    }
-                }
-            }catch(Exception ex)
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
@@ -283,12 +211,15 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_madrina", request.ScMadrina));
                 cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
                 cmd.Parameters.Add(new SqlParameter("@i_nombre", request.PeNombre));
+                cmd.Parameters.Add(new SqlParameter("@i_edad", request.PeEdad));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento", request.PeFechaNacimiento));
                 cmd.Parameters.Add(new SqlParameter("@i_tipoDoc", request.PeIdTipoDocumento));
                 cmd.Parameters.Add(new SqlParameter("@i_direccion", request.PeDireccion));
                 cmd.Parameters.Add(new SqlParameter("@i_observacion", request.ScObservaciones));
                 cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
                 cmd.Parameters.Add(new SqlParameter("@i_Date", createDate));
+                cmd.Parameters.Add(new SqlParameter("@i_id", null));
+                cmd.Parameters.Add(new SqlParameter("@i_lugarBautizo", request.ScLugarBautizo));
 
                 con.Open();
 
@@ -310,6 +241,10 @@ namespace WebApi_SGI_T.Imp
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return response;
@@ -353,6 +288,8 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
                 cmd.Parameters.Add(new SqlParameter("@i_nombre_esposo", request.PeNombreEsposo));
                 cmd.Parameters.Add(new SqlParameter("@i_nombre_esposa", request.PeNombreEsposa));
+                cmd.Parameters.Add(new SqlParameter("@i_edad_esposo", request.PeEdadEsposo));
+                cmd.Parameters.Add(new SqlParameter("@i_edad_esposa", request.PeEdadEsposa));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposo", request.PeFechaNacimientoEsposo));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposa", request.PeFechaNacimientoEsposa));
                 cmd.Parameters.Add(new SqlParameter("@i_tipoDoc_esposo", request.PeIdTipoDocumentoEsposo));
@@ -383,6 +320,10 @@ namespace WebApi_SGI_T.Imp
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return response;
@@ -422,6 +363,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_madrina", request.ScMadrina));
                 cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
                 cmd.Parameters.Add(new SqlParameter("@i_nombre", request.PeNombre));
+                cmd.Parameters.Add(new SqlParameter("@i_edad", request.PeEdad));
                 cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento", request.PeFechaNacimiento));
                 cmd.Parameters.Add(new SqlParameter("@i_tipoDoc", request.PeIdTipoDocumento));
                 cmd.Parameters.Add(new SqlParameter("@i_sexo", request.PeSexoId));
@@ -429,6 +371,7 @@ namespace WebApi_SGI_T.Imp
                 cmd.Parameters.Add(new SqlParameter("@i_direccion", request.PeDireccion));
                 cmd.Parameters.Add(new SqlParameter("@i_User", createUser));
                 cmd.Parameters.Add(new SqlParameter("@i_Date", createDate));
+                cmd.Parameters.Add(new SqlParameter("@i_lugarBautizo", request.ScLugarBautizo));
 
                 con.Open();
 
@@ -450,6 +393,10 @@ namespace WebApi_SGI_T.Imp
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return response;
@@ -477,7 +424,7 @@ namespace WebApi_SGI_T.Imp
                 //var matrimonio = await _context.TblMatrimonios
                 //    .FirstOrDefaultAsync(x => x.MatrimonioId == matrimonioId);
 
-                var matrimonio = await GetMatrimonioById(sacramentoId);
+                var matrimonio = await _matrimonioById.GetMatrimonioById(sacramentoId);
 
                 if (matrimonio.Data != null)
                 {
@@ -502,6 +449,8 @@ namespace WebApi_SGI_T.Imp
                     cmd.Parameters.Add(new SqlParameter("@i_parroco", request.ScParroco));
                     cmd.Parameters.Add(new SqlParameter("@i_nombre_esposo", request.PeNombreEsposo));
                     cmd.Parameters.Add(new SqlParameter("@i_nombre_esposa", request.PeNombreEsposa));
+                    cmd.Parameters.Add(new SqlParameter("@i_edad_esposo", request.PeEdadEsposo));
+                    cmd.Parameters.Add(new SqlParameter("@i_edad_esposa", request.PeEdadEsposa));
                     cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposo", request.PeFechaNacimientoEsposo));
                     cmd.Parameters.Add(new SqlParameter("@i_fechaNacimiento_esposa", request.PeFechaNacimientoEsposa));
                     cmd.Parameters.Add(new SqlParameter("@i_tipoDoc_esposo", request.PeIdTipoDocumentoEsposo));
@@ -543,6 +492,10 @@ namespace WebApi_SGI_T.Imp
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
             }
 
             return response;

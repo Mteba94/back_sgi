@@ -18,7 +18,7 @@ namespace WebApi_SGI_T.Imp
         {
             var userRoles = await (from ur in _context.TblUserRols
                                    join r in _context.TblRols on ur.UrIdRol equals r.RoIdRol
-                                   where ur.UrIdUsuario == userId
+                                   where ur.UrIdUsuario == userId && ur.UrEstado == 1
                                    select r).ToListAsync();
 
             return userRoles;
@@ -50,6 +50,17 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
+                var userRolExists = await _context.TblUserRols.AnyAsync(x => x.UrIdUsuario == userId && x.UrIdRol == roleId);
+                if (userRolExists) {
+
+                    var rolUserExistentes = _context.TblUserRols.Where(x => x.UrIdUsuario == userId).ToList();
+                    foreach (var rolUser in rolUserExistentes)
+                    {
+                        rolUser.UrEstado = 0;
+                        _context.TblUserRols.Update(rolUser);
+                    }
+                }
+
                 var maxId = 0;
 
                 try
@@ -92,7 +103,13 @@ namespace WebApi_SGI_T.Imp
 
             try
             {
-                var userRol = await _context.TblUserRols.FindAsync(id);
+                //ar sacerdote = await _context.TblSacerdotes
+                //    .Where(x => x.ScId == id && x.ScDeleteUser == null && x.ScDeleteDate == null)
+                //    .FirstOrDefaultAsync();
+
+                var userRol = await _context.TblUserRols
+                        .Where(x => x.UrIdUsuario == id && x.UrEstado != 0)
+                        .FirstOrDefaultAsync();
 
                 if (userRol == null)
                 {
@@ -101,12 +118,15 @@ namespace WebApi_SGI_T.Imp
                     return response;
                 }
 
-                _context.TblUserRols.Remove(userRol);
+                userRol.UrEstado = 0;
+
+                _context.TblUserRols.Update(userRol);
                 await _context.SaveChangesAsync();
 
                 response.Data = true;
-                response.Message = ReplyMessage.MESSAGE_DELETE;
                 response.IsSuccess = true;
+                response.Message = ReplyMessage.MESSAGE_DELETE;
+
             }
             catch (Exception ex)
             {

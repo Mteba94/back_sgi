@@ -17,7 +17,7 @@ namespace WebApi_SGI_T.Imp
         {
             var userRoles = await (from ur in _context.TblUserRols
                                    join r in _context.TblRols on ur.UrIdRol equals r.RoIdRol
-                                   where ur.UrIdUsuario == userId
+                                   where ur.UrIdUsuario == userId && ur.UrEstado == 1
                                    select r).ToListAsync();
 
             var permissions = new List<Permission>();

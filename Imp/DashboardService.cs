@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using System.Data;
 using WebApi_SGI_T.Models;
 using WebApi_SGI_T.Models.Commons.Request;
 using WebApi_SGI_T.Models.Commons.Response;
@@ -23,48 +25,44 @@ namespace WebApi_SGI_T.Imp
             {
                 Data = new BaseEntityResponse<IndicadorSacramentosResponse>()
             };
+
+            SqlConnection con = new SqlConnection();
+            SqlCommand cmd;
+            SqlParameter param = new SqlParameter();
+            DataSet ds = new DataSet();
+            SqlDataReader dr;
+
             try
             {
 
-                var query = _context.TblSacramentos
-                        .Join(_context.TblPersonas,
-                            sac => sac.ScIdpersona,
-                            pe => pe.PeIdpersona,
-                            (sac, pe) => new { sac, pe })
-                        .Join(_context.TblTipoSacramentos,
-                            sacPe => sacPe.sac.ScIdTipoSacramento,
-                            ts => ts.TsIdTipoSacramento,
-                            (sacPe, ts) => new { sacPe.sac, sacPe.pe, ts.TsNombre, sacPe.sac.ScFechaSacramento })
-                        .Where(x => x.sac.ScDeleteDate == null && x.sac.ScDeleteUser == null)
-                        .AsQueryable();
+                con.ConnectionString = _context.Database.GetDbConnection().ConnectionString;
+                cmd = new SqlCommand();
+                cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_cantidad_sacramentos";
 
-                if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))
+                cmd.Parameters.Add(new SqlParameter("@i_operacion", "CS"));
+
+                con.Open();
+
+                dr = cmd.ExecuteReader();
+
+                int totalRecords = 0;
+
+                while (dr.Read())
                 {
-                    switch (filters.NumFilter)
+                    var data = new IndicadorSacramentosResponse
                     {
-                        case 1:
-                            query = query.Where(x => x.pe.PeSexoId == byte.Parse(filters.TextFilter));
-                            break;
-                        case 2:
-                            //response.Data.Items = response.Data.Items.Where(x => x.TsDescripcion.Contains(filters.TextFilter)).ToList();
-                            break;
-                    }
-                }
+                        sacramentos = dr["sacramentos"].ToString(),
+                        total = Convert.ToInt32(dr["total"]),
+                        anio = Convert.ToInt32(dr["anio"])
+                    };
 
-                var data = await query
-                .GroupBy(x => new { x.TsNombre, anio = x.ScFechaSacramento.Year })
-                .Select(group => new IndicadorSacramentosResponse
-                {
-                    sacramentos = group.Key.TsNombre,
-                    total = group.Count(),
-                    anio = group.Key.anio
-                })
-                .ToListAsync();
-
-                var totalRecords = data.Count();
+                    response.Data.Items.Add(data);
+                    totalRecords++;
+                };
 
                 response.Data.TotalRecords = totalRecords;
-                response.Data.Items = data;
                 response.Message = ReplyMessage.MESSAGE_QUERY;
                 response.IsSuccess = true;
             }

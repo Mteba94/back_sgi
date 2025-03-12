@@ -13,6 +13,7 @@
         public static string MESSAGE_TOKEN_ERROR = "Nombre de usuario o contraseña no válidos.";
         public static string MESSAGE_VALIDATE = "Errores de validacion.";
         public static string MESSAGE_FAILED = "Ocurrio un error al procesar la solicitud!";
+        public static string MESSAGE_ANNULAR = "Constancia anulada correctamente!.";
 
         //USER ERRORS
         public const string MESSAGE_USERNAME = "El nombre de usuario es oblicatorio!";

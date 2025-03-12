@@ -32,13 +32,13 @@ public partial class TblPersona
     public int? PeDeleteUser { get; set; }
 
     public DateTime? PeDeleteDate { get; set; }
+    public int? PeEdad { get; set; }
 
     public virtual TblTipoDocumento PeIdTipoDocumentoNavigation { get; set; } = null!;
 
     public virtual TblSexo? PeSexoNavigation { get; set; }
 
-    public virtual ICollection<TblSacramento> TblSacramentos { get; set; } = new List<TblSacramento>();
-
     public virtual ICollection<TblMatrimonio> EsposoNavigation { get; set; } = new List<TblMatrimonio>();
     public virtual ICollection<TblMatrimonio> EsposaNavigation { get; set; } = new List<TblMatrimonio>();
+    public virtual ICollection<TblSacramento> TblSacramentos { get; set; } = new List<TblSacramento>();
 }

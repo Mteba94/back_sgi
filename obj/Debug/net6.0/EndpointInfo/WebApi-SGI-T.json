@@ -328,6 +328,29 @@
         }
       }
     },
+    "/api/HistConstancia/{constanciaId}": {
+      "get": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "parameters": [
+          {
+            "name": "constanciaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/HistConstancia/Register": {
       "post": {
         "tags": [
@@ -375,6 +398,79 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistConstancia/Anular/{constanciaId}": {
+      "put": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "parameters": [
+          {
+            "name": "constanciaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HistConstanciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/HistConstancia/ConsultaConstancias": {
+      "post": {
+        "tags": [
+          "HistConstancia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseFiltersRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -855,6 +951,90 @@
       }
     },
     "/api/Sacramento/Update/Matrimonio/{sacramentoId}": {
+      "put": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MatrimonioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Delete/{sacramentoId}": {
+      "put": {
+        "tags": [
+          "Sacramento"
+        ],
+        "parameters": [
+          {
+            "name": "sacramentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SacramentoRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sacramento/Delete/Matrimonio/{sacramentoId}": {
       "put": {
         "tags": [
           "Sacramento"
@@ -1911,6 +2091,10 @@
           "ct_correlativo": {
             "type": "string",
             "nullable": true
+          },
+          "ct_observaciones": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1931,8 +2115,18 @@
             "type": "string",
             "nullable": true
           },
+          "peEdadEsposo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "peNombreEsposa": {
             "type": "string",
+            "nullable": true
+          },
+          "peEdadEsposa": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "peFechaNacimientoEsposo": {
@@ -2061,6 +2255,10 @@
             "type": "string",
             "nullable": true
           },
+          "peEdad": {
+            "type": "string",
+            "nullable": true
+          },
           "peFechaNacimiento": {
             "type": "string",
             "format": "date-time"
@@ -2106,6 +2304,10 @@
             "format": "date-time"
           },
           "scObservaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "scLugarBautizo": {
             "type": "string",
             "nullable": true
           }

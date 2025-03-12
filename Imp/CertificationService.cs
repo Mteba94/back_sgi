@@ -957,9 +957,13 @@ namespace WebApi_SGI_T.Imp
 
         private void GenerarConstanciaMatrimonio(Document doc, CertificationModel model, iTextSharp.text.Font titulo, iTextSharp.text.Font subtitulo, iTextSharp.text.Font normal, iTextSharp.text.Font normalBold)
         {
+            if (string.IsNullOrEmpty(model.NombreBautizado) || string.IsNullOrEmpty(model.NombreEsposa))
+            {
+                // Lanza una excepción o devuelve un error
+                throw new ArgumentException("Los nombres del esposo y la esposa son obligatorios para generar la constancia de matrimonio.");
+            }
+
             float padLeft = 15f;
-
-
 
             string? certi_configuracion = _configuracion["Certification:ViewText"];
 

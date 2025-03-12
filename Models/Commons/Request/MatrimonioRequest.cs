@@ -5,7 +5,9 @@
         public int? ScIdTipoSacramento { get; set; }
         public string? ScNumeroPartida { get; set; }
         public string? PeNombreEsposo { get; set; }
+        public int? PeEdadEsposo { get; set; }
         public string? PeNombreEsposa { get; set; }
+        public int? PeEdadEsposa { get; set; }
         public DateTime? PeFechaNacimientoEsposo { get; set; }
         public DateTime? PeFechaNacimientoEsposa { get; set; }
         public byte PeIdTipoDocumentoEsposo { get; set; }

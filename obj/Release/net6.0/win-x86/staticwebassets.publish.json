@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o5e9tI2Ya5eArFUEGgBPJTQQWFaMdyrr0KF8r/oJj+8=",
+  "Hash": "pzy3iM9B1QAXT2YFeQfwz6XxrYx9ZbeandvUsDIvFrI=",
   "Source": "WebApi-SGI-T",
   "BasePath": "_content/WebApi-SGI-T",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebApi-SGI-T\\wwwroot",
       "Source": "WebApi-SGI-T",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "certificacion/Logo Parroquial-03#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\certificacion\\Logo Parroquial-03.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "certificacion/logo-parroquia#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\certificacion\\logo-parroquia.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "certificacion/Montserrat#[.{fingerprint}]?.ttf",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat.ttf"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "certificacion/Montserrat-Bold#[.{fingerprint}]?.ttf",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat-Bold.ttf"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "certificacion/Montserrat-Regular#[.{fingerprint}]?.ttf",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\certificacion\\Montserrat-Regular.ttf"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/690884ac-48ab-4120-a894-812acc2420f2#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/93148438-86b3-45d1-88f3-d26b07716944#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png"
     },
     {
-      "Identity": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "Identity": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
       "SourceId": "WebApi-SGI-T",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\",
       "BasePath": "_content/WebApi-SGI-T",
       "RelativePath": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -272,7 +272,7 @@
   "Endpoints": [
     {
       "Route": "certificacion/Logo Parroquial-03.0xkbw0pxac.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -317,7 +317,7 @@
     },
     {
       "Route": "certificacion/Logo Parroquial-03.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Logo Parroquial-03.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -354,7 +354,7 @@
     },
     {
       "Route": "certificacion/logo-parroquia.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -391,7 +391,7 @@
     },
     {
       "Route": "certificacion/logo-parroquia.rew5yvu9ya.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\logo-parroquia.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -436,7 +436,7 @@
     },
     {
       "Route": "certificacion/Montserrat.32toxddriz.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -481,7 +481,7 @@
     },
     {
       "Route": "certificacion/Montserrat.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -518,7 +518,7 @@
     },
     {
       "Route": "certificacion/Montserrat-Bold.0f68wwysiu.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -563,7 +563,7 @@
     },
     {
       "Route": "certificacion/Montserrat-Bold.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Bold.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -600,7 +600,7 @@
     },
     {
       "Route": "certificacion/Montserrat-Regular.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -637,7 +637,7 @@
     },
     {
       "Route": "certificacion/Montserrat-Regular.x1juw6fwdo.ttf",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\certificacion\\Montserrat-Regular.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -682,7 +682,7 @@
     },
     {
       "Route": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -719,7 +719,7 @@
     },
     {
       "Route": "user-images/107d65fc-16b7-47b0-b8e9-76316576f054.xlvkyd499j.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\107d65fc-16b7-47b0-b8e9-76316576f054.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -764,7 +764,7 @@
     },
     {
       "Route": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3.k9jsqf6kpk.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -809,7 +809,7 @@
     },
     {
       "Route": "user-images/27699923-c491-4b0e-87aa-33d4becb4ac3.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\27699923-c491-4b0e-87aa-33d4becb4ac3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -846,7 +846,7 @@
     },
     {
       "Route": "user-images/690884ac-48ab-4120-a894-812acc2420f2.k9jsqf6kpk.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -891,7 +891,7 @@
     },
     {
       "Route": "user-images/690884ac-48ab-4120-a894-812acc2420f2.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\690884ac-48ab-4120-a894-812acc2420f2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -928,7 +928,7 @@
     },
     {
       "Route": "user-images/93148438-86b3-45d1-88f3-d26b07716944.k9jsqf6kpk.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -973,7 +973,7 @@
     },
     {
       "Route": "user-images/93148438-86b3-45d1-88f3-d26b07716944.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\93148438-86b3-45d1-88f3-d26b07716944.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1010,7 +1010,7 @@
     },
     {
       "Route": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.k9jsqf6kpk.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1055,7 +1055,7 @@
     },
     {
       "Route": "user-images/95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\95ccc8ff-7a3f-47a7-9a13-4c3428d56a5b.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1092,7 +1092,7 @@
     },
     {
       "Route": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1129,7 +1129,7 @@
     },
     {
       "Route": "user-images/b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.xlvkyd499j.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5bc8b62-5d06-4bbf-b75f-6b41b4fdd599.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1174,7 +1174,7 @@
     },
     {
       "Route": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1211,7 +1211,7 @@
     },
     {
       "Route": "user-images/b5e81f50-df00-4f79-90a5-3c3b66dac6b3.xlvkyd499j.png",
-      "AssetFile": "D:\\Geova\\Cursos Udemy\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
+      "AssetFile": "C:\\Users\\geova\\Desktop\\Codes\\Informacion Tesis\\SISTEMA\\API\\WebApi-SGI-T\\wwwroot\\user-images\\b5e81f50-df00-4f79-90a5-3c3b66dac6b3.png",
       "Selectors": [],
       "ResponseHeaders": [
         {

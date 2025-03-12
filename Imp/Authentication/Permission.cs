@@ -18,6 +18,8 @@
         getMatrimonioById = 11,
         RegisterMatrimonio = 12,
         UpdateMatrimonio = 13,
+        DeleteMatrimonio = 57,
+        DeleteSacramento = 58,
 
         //TipoDocumentoController
         ListTipoDocumentoSelect = 14,
@@ -45,6 +47,9 @@
         GetHistoricoConstancias = 27,
         HistConstanciaRegister = 28,
         GenararCorrelativo = 29,
+        ConstanciabyId = 59,
+        AnularConstancia = 60,
+        ListConstanciasAnulacion = 61,
 
         //RolController
         ListRolSelect = 30,
@@ -84,5 +89,6 @@
         ListSelectFirma = 54,
         RegisterFirma = 55,
         DeleteFirma = 56,
+
     }
 }

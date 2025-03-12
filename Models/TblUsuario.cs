@@ -43,4 +43,7 @@ public partial class TblUsuario
     public virtual TblSexo? UsSexoNavigation { get; set; }
 
     public virtual ICollection<TblConstancias> UsConstancias { get; set; } = null!;
+    public virtual ICollection<TblSolicitudesAnulacion> UsSolicitudAnulacion { get; set; } = null!;
+    public virtual ICollection<TblSolicitudesAnulacion> UsApruebaAnulacion { get; set; } = null!;
 }
+
